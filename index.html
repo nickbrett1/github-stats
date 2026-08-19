@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub Weekly Diff Stats</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 14px 16px 8px; background: transparent; color: #e2e8f0; font-size: 13px; }
+  @media (prefers-color-scheme: light) { body { color: #1e293b; } }
+  h1 { font-size: 14px; margin: 0 0 3px; font-weight: 600; }
+  .meta { font-size: 11px; opacity: .55; margin-bottom: 10px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: right; padding: 5px 8px; white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  th { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; opacity: .6; border-bottom: 1px solid rgba(148,163,184,.3); }
+  td { border-bottom: 1px solid rgba(148,163,184,.12); font-variant-numeric: tabular-nums; }
+  tr.total td { border-top: 2px solid rgba(148,163,184,.45); border-bottom: none; font-weight: 700; }
+  .pos { color: #4ade80; } .neg { color: #f87171; } .zero { color: inherit; }
+  @media (prefers-color-scheme: light) { .pos { color: #16a34a; } .neg { color: #dc2626; } }
+  .error { color: #f87171; padding: 8px; }
+</style>
+</head>
+<body>
+  <h1>GitHub — last 7 days</h1>
+  <div class="meta" id="meta"></div>
+  <div id="content">Loading…</div>
+<script>
+const URL = "./stats/weekly.json";
+async function load() {
+  try {
+    const r = await fetch(URL, { cache: "no-store" });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const data = await r.json();
+    render(data);
+  } catch (e) {
+    document.getElementById("content").innerHTML = '<div class="error">Failed to load stats: ' + e.message + "</div>";
+  }
+}
+function render(data) {
+  const rows = [];
+  let totalAdded = 0, totalDeleted = 0, totalNet = 0;
+  for (const [repo, s] of Object.entries(data)) {
+    if (repo === "generated_at") continue;
+    const a = s.added || 0, d = s.deleted || 0, n = s.net || 0;
+    totalAdded += a; totalDeleted += d; totalNet += n;
+    rows.push({ repo, a, d, n });
+  }
+  rows.sort((x, y) => y.n - x.n);
+  const cls = (v) => (v > 0 ? "pos" : v < 0 ? "neg" : "zero");
+  const cell = (v, c) => '<td class="' + c + '">' + v.toLocaleString() + "</td>";
+  let html = '<table><thead><tr><th>Repository</th><th>Added</th><th>Removed</th><th>Net</th></tr></thead><tbody>';
+  for (const r of rows) {
+    html += "<tr><td>" + r.repo + "</td>" + cell(r.a, cls(r.a)) + cell(r.d, cls(r.d)) + cell(r.n, cls(r.n)) + "</tr>";
+  }
+  html += '<tr class="total"><td>Total (' + rows.length + " repos)</td>" + cell(totalAdded, cls(totalAdded)) + cell(totalDeleted, cls(totalDeleted)) + cell(totalNet, cls(totalNet)) + "</tr></tbody></table>";
+  document.getElementById("content").innerHTML = html;
+  const gen = data.generated_at ? new Date(data.generated_at).toLocaleString() : "unknown";
+  document.getElementById("meta").textContent = "Updated " + gen + " — auto-refreshes every 15 min";
+}
+load();
+setInterval(load, 15 * 60 * 1000);
+</script>
+</body>
+</html>
