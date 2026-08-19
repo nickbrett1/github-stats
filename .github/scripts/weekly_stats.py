@@ -2,13 +2,17 @@
 """Weekly GitHub diff stats — lines added/deleted per owned repo, last N days.
 
 Aggregates commit-level additions/deletions across the user's owned
-(non-fork, non-archived) repositories and writes a flat JSON object:
+(non-fork, non-archived) repositories and writes a JSON object:
 
-    {"repo-name": {"added": 1240, "deleted": 318, "net": 922}, ...}
+    {
+      "generated_at": "2026-08-19T18:00:00+00:00",
+      "repo-name": {"added": 1240, "deleted": 318, "net": 922},
+      ...
+    }
 
-Repos with zero activity in the window are omitted.
-
-Requires GH_TOKEN (fine-grained PAT with read access to repositories).
+Every owned repo is included (zeros are kept so the Homepage table is
+complete and can compute totals). Requires GH_TOKEN (fine-grained PAT with
+read access to repositories).
 """
 import argparse
 import datetime as dt
@@ -78,15 +82,18 @@ def main():
                 added += detail.get("stats", {}).get("additions", 0)
                 deleted += detail.get("stats", {}).get("deletions", 0)
 
-            if added or deleted:
-                stats[name] = {"added": added, "deleted": deleted, "net": added - deleted}
+            # always include the repo (zeros kept, totals computed client-side)
+            stats[name] = {"added": added, "deleted": deleted, "net": added - deleted}
         except Exception as e:
             print(f"WARN: skipping {name}: {e}", file=sys.stderr)
 
+    out = {"generated_at": dt.datetime.now(dt.timezone.utc).isoformat()}
+    out.update(stats)
+
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
     with open(args.out, "w") as f:
-        json.dump(stats, f, indent=2, sort_keys=True)
-    print(f"wrote {args.out}: {len(stats)} repos with activity")
+        json.dump(out, f, indent=2, sort_keys=True)
+    print(f"wrote {args.out}: {len(stats)} repos (zeros included)")
     for name, s in sorted(stats.items()):
         print(f"  {name}: +{s['added']} -{s['deleted']} net {s['net']}")
 
