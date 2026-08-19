@@ -6,14 +6,15 @@
 <title>GitHub Weekly Diff Stats</title>
 <style>
   :root { color-scheme: light dark; }
-  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 14px 16px 8px; background: transparent; color: #e2e8f0; font-size: 13px; }
-  @media (prefers-color-scheme: light) { body { color: #1e293b; } }
+  html, body { background: #0f172a; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 14px 16px 8px; font-size: 13px; color: #e2e8f0; }
+  @media (prefers-color-scheme: light) { html, body { background: #ffffff; } body { color: #1e293b; } }
   h1 { font-size: 14px; margin: 0 0 3px; font-weight: 600; }
   .meta { font-size: 11px; opacity: .55; margin-bottom: 10px; }
   table { width: 100%; border-collapse: collapse; }
   th, td { text-align: right; padding: 5px 8px; white-space: nowrap; }
   th:first-child, td:first-child { text-align: left; }
-  th { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; opacity: .6; border-bottom: 1px solid rgba(148,163,184,.3); }
+  th { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; opacity: .65; border-bottom: 1px solid rgba(148,163,184,.35); }
   td { border-bottom: 1px solid rgba(148,163,184,.12); font-variant-numeric: tabular-nums; }
   tr.total td { border-top: 2px solid rgba(148,163,184,.45); border-bottom: none; font-weight: 700; }
   .pos { color: #4ade80; } .neg { color: #f87171; } .zero { color: inherit; }
@@ -43,6 +44,7 @@ function render(data) {
   for (const [repo, s] of Object.entries(data)) {
     if (repo === "generated_at") continue;
     const a = s.added || 0, d = s.deleted || 0, n = s.net || 0;
+    if (a === 0 && d === 0) continue; // skip empty rows
     totalAdded += a; totalDeleted += d; totalNet += n;
     rows.push({ repo, a, d, n });
   }
