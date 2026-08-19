@@ -4,6 +4,16 @@
     "deleted": 55,
     "net": 2
   },
+  "agy-telemetry": {
+    "added": 0,
+    "deleted": 0,
+    "net": 0
+  },
+  "dagster-tutorial": {
+    "added": 0,
+    "deleted": 0,
+    "net": 0
+  },
   "dbt-duckdb": {
     "added": 10,
     "deleted": 7,
@@ -19,15 +29,21 @@
     "deleted": 2694,
     "net": 468
   },
+  "generated_at": "2026-08-19T18:20:16.153979+00:00",
   "github-stats": {
-    "added": 183,
-    "deleted": 3,
-    "net": 180
+    "added": 316,
+    "deleted": 12,
+    "net": 304
   },
   "goose-recipes": {
     "added": 185,
     "deleted": 3,
     "net": 182
+  },
+  "huddle-concept": {
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "mailroom": {
     "added": 18541,
@@ -39,6 +55,16 @@
     "deleted": 74,
     "net": 348
   },
+  "nas-port-mcp-regen-check": {
+    "added": 0,
+    "deleted": 0,
+    "net": 0
+  },
+  "openclaw-nas": {
+    "added": 0,
+    "deleted": 0,
+    "net": 0
+  },
   "parquet-peek": {
     "added": 7341,
     "deleted": 382,
@@ -48,5 +74,10 @@
     "added": 45,
     "deleted": 6,
     "net": 39
+  },
+  "tdarr-nas": {
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   }
 }
