@@ -24,8 +24,7 @@ jobs:
       - name: Compute weekly stats
         env:
           GH_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
-        run: python .github/scripts/weekly_stats.py --days 7 --out stats/weekl
-y.json
+        run: python .github/scripts/weekly_stats.py --days 7 --out stats/weekly.json
       - name: Commit and push
         run: |
           git config user.name "github-stats-bot"
