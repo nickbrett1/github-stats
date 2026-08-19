@@ -1,0 +1,52 @@
+{
+  "agent-swarm": {
+    "added": 57,
+    "deleted": 55,
+    "net": 2
+  },
+  "dbt-duckdb": {
+    "added": 10,
+    "deleted": 7,
+    "net": 3
+  },
+  "devopen": {
+    "added": 9,
+    "deleted": 0,
+    "net": 9
+  },
+  "ftn": {
+    "added": 3162,
+    "deleted": 2694,
+    "net": 468
+  },
+  "github-stats": {
+    "added": 183,
+    "deleted": 3,
+    "net": 180
+  },
+  "goose-recipes": {
+    "added": 185,
+    "deleted": 3,
+    "net": 182
+  },
+  "mailroom": {
+    "added": 18541,
+    "deleted": 866,
+    "net": 17675
+  },
+  "nas-port-mcp": {
+    "added": 422,
+    "deleted": 74,
+    "net": 348
+  },
+  "parquet-peek": {
+    "added": 7341,
+    "deleted": 382,
+    "net": 6959
+  },
+  "stripe-toddler": {
+    "added": 45,
+    "deleted": 6,
+    "net": 39
+  }
+}
