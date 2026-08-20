@@ -25,14 +25,14 @@
     "net": 9
   },
   "ftn": {
-    "added": 3162,
-    "deleted": 2694,
-    "net": 468
+    "added": 3400,
+    "deleted": 2935,
+    "net": 465
   },
-  "generated_at": "2026-08-19T22:55:32.319708+00:00",
+  "generated_at": "2026-08-20T00:07:49.408185+00:00",
   "github-stats": {
-    "added": 374,
-    "deleted": 32,
+    "added": 378,
+    "deleted": 36,
     "net": 342
   },
   "goose-recipes": {
@@ -46,14 +46,14 @@
     "net": 0
   },
   "mailroom": {
-    "added": 18541,
-    "deleted": 866,
-    "net": 17675
+    "added": 18824,
+    "deleted": 868,
+    "net": 17956
   },
   "nas-port-mcp": {
-    "added": 422,
-    "deleted": 74,
-    "net": 348
+    "added": 384,
+    "deleted": 32,
+    "net": 352
   },
   "nas-port-mcp-regen-check": {
     "added": 0,
