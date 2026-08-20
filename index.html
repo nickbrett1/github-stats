@@ -17,34 +17,54 @@
   th { font-size: 9px; text-transform: uppercase; letter-spacing: .05em; opacity: .65; border-bottom: 1px solid rgba(148,163,184,.35); }
   td { border-bottom: 1px solid rgba(148,163,184,.12); font-variant-numeric: tabular-nums; }
   tr.total td { border-top: 2px solid rgba(148,163,184,.45); border-bottom: none; font-weight: 700; }
+  tr.repo-row { cursor: pointer; }
+  tr.repo-row:hover td { background: rgba(148,163,184,.10); }
   .pos { color: #4ade80; } .neg { color: #f87171; } .zero { color: inherit; }
   @media (prefers-color-scheme: light) { .pos { color: #16a34a; } .neg { color: #dc2626; } }
   .error { color: #f87171; padding: 8px; }
+  .back { cursor: pointer; color: inherit; opacity: .7; text-decoration: underline; font-size: 11px; margin-bottom: 4px; display: inline-block; }
+  .back:hover { opacity: 1; }
+  .chart-note { font-size: 10px; opacity: .6; margin-top: 4px; }
 </style>
 </head>
 <body>
-  <h1>GitHub — last 7 days</h1>
+  <h1 id="title">GitHub — last 7 days</h1>
   <div class="meta" id="meta"></div>
   <div id="content">Loading…</div>
 <script>
-const URL = "./stats/weekly.json";
+const WEEKLY = "./stats/weekly.json";
+const HISTORY = "./stats/history.json";
+let weeklyData = null;
+let historyData = null;
+
 async function load() {
   try {
-    const r = await fetch(URL, { cache: "no-store" });
+    const r = await fetch(WEEKLY, { cache: "no-store" });
     if (!r.ok) throw new Error("HTTP " + r.status);
-    const data = await r.json();
-    render(data);
+    weeklyData = await r.json();
+    renderTable();
   } catch (e) {
     document.getElementById("content").innerHTML = '<div class="error">Failed to load stats: ' + e.message + "</div>";
   }
 }
-function render(data) {
+
+async function loadHistory() {
+  if (historyData) return historyData;
+  const r = await fetch(HISTORY, { cache: "no-store" });
+  if (!r.ok) throw new Error("HTTP " + r.status);
+  historyData = await r.json();
+  return historyData;
+}
+
+function renderTable() {
+  document.getElementById("title").textContent = "GitHub — last 7 days";
+  const data = weeklyData;
   const rows = [];
   let totalAdded = 0, totalDeleted = 0, totalNet = 0;
   for (const [repo, s] of Object.entries(data)) {
     if (repo === "generated_at") continue;
     const a = s.added || 0, d = s.deleted || 0, n = s.net || 0;
-    if (a === 0 && d === 0) continue; // skip empty rows
+    if (a === 0 && d === 0) continue;
     totalAdded += a; totalDeleted += d; totalNet += n;
     rows.push({ repo, a, d, n });
   }
@@ -53,10 +73,10 @@ function render(data) {
   const cell = (v, c) => '<td class="' + c + '">' + v.toLocaleString() + "</td>";
   let html = '<table><thead><tr><th>Repository</th><th>Added</th><th>Removed</th><th>Net</th></tr></thead><tbody>';
   for (const r of rows) {
-    html += "<tr><td>" + r.repo + "</td>"
+    html += '<tr class="repo-row" onclick="showTrend(\'' + r.repo + '\')"><td>' + r.repo + "</td>"
       + cell(r.a, r.a > 0 ? "pos" : "zero")
-      + cell(r.d, r.d > 0 ? "neg" : "zero")   // removed always red
-      + cell(r.n, netCls(r.n)) + "</tr>";     // negative net red
+      + cell(r.d, r.d > 0 ? "neg" : "zero")
+      + cell(r.n, netCls(r.n)) + "</tr>";
   }
   html += '<tr class="total"><td>Total (' + rows.length + " repos)</td>"
     + cell(totalAdded, totalAdded > 0 ? "pos" : "zero")
@@ -64,8 +84,69 @@ function render(data) {
     + cell(totalNet, netCls(totalNet)) + "</tr></tbody></table>";
   document.getElementById("content").innerHTML = html;
   const gen = data.generated_at ? new Date(data.generated_at).toLocaleString() : "unknown";
-  document.getElementById("meta").textContent = "Updated " + gen + " — regenerated weekly by GitHub Actions";
+  document.getElementById("meta").textContent = "Updated " + gen + " — regenerated weekly by GitHub Actions · click a repo for its trend";
 }
+
+async function showTrend(repo) {
+  try {
+    const h = await loadHistory();
+    const weeks = h.weeks || [];
+    const series = weeks
+      .map((w) => {
+        const s = (w.repos || {})[repo];
+        return s ? { week: w.week, added: s.added || 0, deleted: s.deleted || 0, net: s.net || 0 } : null;
+      })
+      .filter(Boolean);
+    if (!series.length) {
+      document.getElementById("content").innerHTML = '<div class="error">No history for ' + repo + "</div>";
+      return;
+    }
+    renderTrend(repo, series, weeks.length);
+  } catch (e) {
+    document.getElementById("content").innerHTML = '<div class="error">Failed to load history: ' + e.message + "</div>";
+  }
+}
+
+function renderTrend(repo, series, totalWeeks) {
+  document.getElementById("title").textContent = repo + " — weekly net";
+  document.getElementById("meta").textContent = "Last " + series.length + " weeks with data · click a bar for exact net";
+  const W = 320, H = 130, top = 10, bottom = 22;
+  const plotH = H - top - bottom;
+  const maxAbs = Math.max(100, ...series.map((s) => Math.abs(s.net)));
+  const slot = (W - 8) / series.length;
+  const barW = Math.max(3, slot * 0.62);
+  const zeroY = top + plotH;
+  const scale = (v) => (Math.abs(v) / maxAbs) * plotH;
+  let bars = "";
+  let labels = "";
+  series.forEach((s, i) => {
+    const h = Math.max(scale(s.net), 1.5);
+    const x = 4 + i * slot + (slot - barW) / 2;
+    const y = s.net >= 0 ? zeroY - h : zeroY;
+    const color = s.net >= 0 ? "#4ade80" : "#f87171";
+    bars += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + barW.toFixed(1)
+      + '" height="' + h.toFixed(1) + '" fill="' + color + '" rx="1">'
+      + "<title>" + s.week + ": " + (s.net >= 0 ? "+" : "") + s.net + " net</title></rect>";
+    if (i === 0 || i === series.length - 1 || i % 2 === 1) {
+      const lbl = s.week.slice(5);
+      labels += '<text x="' + (x + barW / 2).toFixed(1) + '" y="' + (H - 6) + '" font-size="8" text-anchor="middle" opacity=".55">' + lbl + "</text>";
+    }
+  });
+  const svg = '<svg viewBox="0 0 ' + W + " " + H + '" style="width:100%;max-width:420px" preserveAspectRatio="xMidYMid meet">'
+    + '<line x1="4" y1="' + zeroY + '" x2="' + (W - 4) + '" y2="' + zeroY + '" stroke="rgba(148,163,184,.35)" stroke-width="1"/>'
+    + bars + labels + "</svg>";
+  let totalAdded = 0, totalDeleted = 0, totalNet = 0;
+  series.forEach((s) => { totalAdded += s.added; totalDeleted += s.deleted; totalNet += s.net; });
+  const fmt = (v) => v.toLocaleString();
+  const sign = (v) => (v > 0 ? "+" : "") + fmt(v);
+  const netColor = totalNet >= 0 ? "pos" : "neg";
+  html = '<div class="back" onclick="renderTable()">← Back to all repos</div>' + svg
+    + '<div class="chart-note">Total over period: <span class="pos">+' + fmt(totalAdded)
+    + '</span> / <span class="neg">−' + fmt(totalDeleted) + '</span> / net <span class="' + netColor + '">'
+    + sign(totalNet) + "</span></div>";
+  document.getElementById("content").innerHTML = html;
+}
+
 load();
 </script>
 </body>
