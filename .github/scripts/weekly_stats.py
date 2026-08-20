@@ -4,7 +4,7 @@
 Writes:
   stats/weekly.json  — current 7-day snapshot {generated_at, <repo>: {added, deleted, net}}
   stats/history.json — accumulated weekly snapshots {"weeks": [{"week": <Mon-date>, "repos": {...}}, ...]}
-                       (idempotent; --backfill N seeds the previous N weeks)
+                       (idempotent; --backfill N seeds the previous N weeks; never trimmed)
 
 Requires GH_TOKEN (fine-grained PAT with read access to repositories).
 """
@@ -18,7 +18,6 @@ import urllib.parse
 import urllib.request
 
 API = "https://api.github.com"
-HISTORY_LIMIT = 52
 
 
 def gh(path):
@@ -125,7 +124,6 @@ def main():
         add_week(week_key, end, since, end.isoformat(), f"backfill {k}")
 
     history["weeks"].sort(key=lambda w: w["week"])
-    history["weeks"] = history["weeks"][-HISTORY_LIMIT:]
 
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
     cur = history["weeks"][-1]["repos"] if history["weeks"] else {}
