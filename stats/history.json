@@ -1,0 +1,193 @@
+{
+  "weeks": [
+    {
+      "week": "2026-06-22",
+      "repos": {
+        "agent-swarm": {"added": 3614, "deleted": 4618, "net": -1004},
+        "agy-telemetry": {"added": 0, "deleted": 0, "net": 0},
+        "dagster-tutorial": {"added": 0, "deleted": 0, "net": 0},
+        "dbt-duckdb": {"added": 9, "deleted": 8, "net": 1},
+        "devopen": {"added": 0, "deleted": 0, "net": 0},
+        "ftn": {"added": 11119, "deleted": 10462, "net": 657},
+        "github-stats": {"added": 0, "deleted": 0, "net": 0},
+        "goose-recipes": {"added": 0, "deleted": 0, "net": 0},
+        "huddle-concept": {"added": 0, "deleted": 0, "net": 0},
+        "mailroom": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp-regen-check": {"added": 0, "deleted": 0, "net": 0},
+        "openclaw-nas": {"added": 3, "deleted": 6, "net": -3},
+        "parquet-peek": {"added": 0, "deleted": 0, "net": 0},
+        "stripe-toddler": {"added": 0, "deleted": 0, "net": 0},
+        "tdarr-nas": {"added": 0, "deleted": 0, "net": 0}
+      }
+    },
+    {
+      "week": "2026-06-29",
+      "repos": {
+        "agent-swarm": {"added": 445, "deleted": 390, "net": 55},
+        "agy-telemetry": {"added": 0, "deleted": 0, "net": 0},
+        "dagster-tutorial": {"added": 0, "deleted": 0, "net": 0},
+        "dbt-duckdb": {"added": 2, "deleted": 2, "net": 0},
+        "devopen": {"added": 0, "deleted": 0, "net": 0},
+        "ftn": {"added": 5298, "deleted": 8828, "net": -3530},
+        "github-stats": {"added": 0, "deleted": 0, "net": 0},
+        "goose-recipes": {"added": 0, "deleted": 0, "net": 0},
+        "huddle-concept": {"added": 0, "deleted": 0, "net": 0},
+        "mailroom": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp-regen-check": {"added": 0, "deleted": 0, "net": 0},
+        "openclaw-nas": {"added": 344, "deleted": 8, "net": 336},
+        "parquet-peek": {"added": 0, "deleted": 0, "net": 0},
+        "stripe-toddler": {"added": 0, "deleted": 0, "net": 0},
+        "tdarr-nas": {"added": 43, "deleted": 17, "net": 26}
+      }
+    },
+    {
+      "week": "2026-07-06",
+      "repos": {
+        "agent-swarm": {"added": 4861, "deleted": 4492, "net": 369},
+        "agy-telemetry": {"added": 0, "deleted": 0, "net": 0},
+        "dagster-tutorial": {"added": 0, "deleted": 0, "net": 0},
+        "dbt-duckdb": {"added": 1, "deleted": 1, "net": 0},
+        "devopen": {"added": 0, "deleted": 0, "net": 0},
+        "ftn": {"added": 5400, "deleted": 4413, "net": 987},
+        "github-stats": {"added": 0, "deleted": 0, "net": 0},
+        "goose-recipes": {"added": 0, "deleted": 0, "net": 0},
+        "huddle-concept": {"added": 0, "deleted": 0, "net": 0},
+        "mailroom": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp-regen-check": {"added": 0, "deleted": 0, "net": 0},
+        "openclaw-nas": {"added": 0, "deleted": 0, "net": 0},
+        "parquet-peek": {"added": 0, "deleted": 0, "net": 0},
+        "stripe-toddler": {"added": 0, "deleted": 0, "net": 0},
+        "tdarr-nas": {"added": 0, "deleted": 0, "net": 0}
+      }
+    },
+    {
+      "week": "2026-07-13",
+      "repos": {
+        "agent-swarm": {"added": 4473, "deleted": 4552, "net": -79},
+        "agy-telemetry": {"added": 0, "deleted": 0, "net": 0},
+        "dagster-tutorial": {"added": 0, "deleted": 0, "net": 0},
+        "dbt-duckdb": {"added": 1, "deleted": 1, "net": 0},
+        "devopen": {"added": 0, "deleted": 0, "net": 0},
+        "ftn": {"added": 7860, "deleted": 7438, "net": 422},
+        "github-stats": {"added": 0, "deleted": 0, "net": 0},
+        "goose-recipes": {"added": 0, "deleted": 0, "net": 0},
+        "huddle-concept": {"added": 0, "deleted": 0, "net": 0},
+        "mailroom": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp-regen-check": {"added": 0, "deleted": 0, "net": 0},
+        "openclaw-nas": {"added": 0, "deleted": 0, "net": 0},
+        "parquet-peek": {"added": 0, "deleted": 0, "net": 0},
+        "stripe-toddler": {"added": 0, "deleted": 0, "net": 0},
+        "tdarr-nas": {"added": 0, "deleted": 0, "net": 0}
+      }
+    },
+    {
+      "week": "2026-07-20",
+      "repos": {
+        "agent-swarm": {"added": 7338, "deleted": 5459, "net": 1879},
+        "agy-telemetry": {"added": 3083, "deleted": 149, "net": 2934},
+        "dagster-tutorial": {"added": 0, "deleted": 0, "net": 0},
+        "dbt-duckdb": {"added": 26, "deleted": 17, "net": 9},
+        "devopen": {"added": 0, "deleted": 0, "net": 0},
+        "ftn": {"added": 21012, "deleted": 17387, "net": 3625},
+        "github-stats": {"added": 0, "deleted": 0, "net": 0},
+        "goose-recipes": {"added": 0, "deleted": 0, "net": 0},
+        "huddle-concept": {"added": 0, "deleted": 0, "net": 0},
+        "mailroom": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp-regen-check": {"added": 0, "deleted": 0, "net": 0},
+        "openclaw-nas": {"added": 0, "deleted": 0, "net": 0},
+        "parquet-peek": {"added": 0, "deleted": 0, "net": 0},
+        "stripe-toddler": {"added": 17786, "deleted": 425, "net": 17361},
+        "tdarr-nas": {"added": 0, "deleted": 0, "net": 0}
+      }
+    },
+    {
+      "week": "2026-07-27",
+      "repos": {
+        "agent-swarm": {"added": 3454, "deleted": 3280, "net": 174},
+        "agy-telemetry": {"added": 687, "deleted": 125, "net": 562},
+        "dagster-tutorial": {"added": 0, "deleted": 0, "net": 0},
+        "dbt-duckdb": {"added": 3, "deleted": 3, "net": 0},
+        "devopen": {"added": 0, "deleted": 0, "net": 0},
+        "ftn": {"added": 5909, "deleted": 6500, "net": -591},
+        "github-stats": {"added": 0, "deleted": 0, "net": 0},
+        "goose-recipes": {"added": 0, "deleted": 0, "net": 0},
+        "huddle-concept": {"added": 0, "deleted": 0, "net": 0},
+        "mailroom": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp-regen-check": {"added": 0, "deleted": 0, "net": 0},
+        "openclaw-nas": {"added": 0, "deleted": 0, "net": 0},
+        "parquet-peek": {"added": 0, "deleted": 0, "net": 0},
+        "stripe-toddler": {"added": 3927, "deleted": 2509, "net": 1418},
+        "tdarr-nas": {"added": 0, "deleted": 0, "net": 0}
+      }
+    },
+    {
+      "week": "2026-08-03",
+      "repos": {
+        "agent-swarm": {"added": 929, "deleted": 892, "net": 37},
+        "agy-telemetry": {"added": 531, "deleted": 379, "net": 152},
+        "dagster-tutorial": {"added": 0, "deleted": 0, "net": 0},
+        "dbt-duckdb": {"added": 0, "deleted": 0, "net": 0},
+        "devopen": {"added": 0, "deleted": 0, "net": 0},
+        "ftn": {"added": 11576, "deleted": 2845, "net": 8731},
+        "github-stats": {"added": 0, "deleted": 0, "net": 0},
+        "goose-recipes": {"added": 680, "deleted": 8, "net": 672},
+        "huddle-concept": {"added": 0, "deleted": 0, "net": 0},
+        "mailroom": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp-regen-check": {"added": 0, "deleted": 0, "net": 0},
+        "openclaw-nas": {"added": 0, "deleted": 0, "net": 0},
+        "parquet-peek": {"added": 0, "deleted": 0, "net": 0},
+        "stripe-toddler": {"added": 4805, "deleted": 333, "net": 4472},
+        "tdarr-nas": {"added": 0, "deleted": 0, "net": 0}
+      }
+    },
+    {
+      "week": "2026-08-10",
+      "repos": {
+        "agent-swarm": {"added": 48, "deleted": 49, "net": -1},
+        "agy-telemetry": {"added": 0, "deleted": 0, "net": 0},
+        "dagster-tutorial": {"added": 0, "deleted": 0, "net": 0},
+        "dbt-duckdb": {"added": 2, "deleted": 2, "net": 0},
+        "devopen": {"added": 2076, "deleted": 244, "net": 1832},
+        "ftn": {"added": 6540, "deleted": 1637, "net": 4903},
+        "github-stats": {"added": 0, "deleted": 0, "net": 0},
+        "goose-recipes": {"added": 0, "deleted": 0, "net": 0},
+        "huddle-concept": {"added": 0, "deleted": 0, "net": 0},
+        "mailroom": {"added": 0, "deleted": 0, "net": 0},
+        "nas-port-mcp": {"added": 4046, "deleted": 524, "net": 3522},
+        "nas-port-mcp-regen-check": {"added": 3069, "deleted": 0, "net": 3069},
+        "openclaw-nas": {"added": 0, "deleted": 0, "net": 0},
+        "parquet-peek": {"added": 3169, "deleted": 168, "net": 3001},
+        "stripe-toddler": {"added": 2295, "deleted": 540, "net": 1755},
+        "tdarr-nas": {"added": 0, "deleted": 0, "net": 0}
+      }
+    },
+    {
+      "week": "2026-08-17",
+      "repos": {
+        "agent-swarm": {"added": 57, "deleted": 55, "net": 2},
+        "agy-telemetry": {"added": 0, "deleted": 0, "net": 0},
+        "dagster-tutorial": {"added": 0, "deleted": 0, "net": 0},
+        "dbt-duckdb": {"added": 10, "deleted": 7, "net": 3},
+        "devopen": {"added": 9, "deleted": 0, "net": 9},
+        "ftn": {"added": 3400, "deleted": 2935, "net": 465},
+        "github-stats": {"added": 378, "deleted": 36, "net": 342},
+        "goose-recipes": {"added": 185, "deleted": 3, "net": 182},
+        "huddle-concept": {"added": 0, "deleted": 0, "net": 0},
+        "mailroom": {"added": 18824, "deleted": 868, "net": 17956},
+        "nas-port-mcp": {"added": 384, "deleted": 32, "net": 352},
+        "nas-port-mcp-regen-check": {"added": 0, "deleted": 0, "net": 0},
+        "openclaw-nas": {"added": 0, "deleted": 0, "net": 0},
+        "parquet-peek": {"added": 7341, "deleted": 382, "net": 6959},
+        "stripe-toddler": {"added": 45, "deleted": 6, "net": 39},
+        "tdarr-nas": {"added": 0, "deleted": 0, "net": 0}
+      }
+    }
+  ]
+}
