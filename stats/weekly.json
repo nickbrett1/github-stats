@@ -1,8 +1,8 @@
 {
   "agent-swarm": {
-    "added": 57,
-    "deleted": 55,
-    "net": 2
+    "added": 173,
+    "deleted": 198,
+    "net": -25
   },
   "agy-telemetry": {
     "added": 0,
@@ -14,31 +14,41 @@
     "deleted": 0,
     "net": 0
   },
+  "dagu-dags": {
+    "added": 32,
+    "deleted": 5,
+    "net": 27
+  },
+  "dagu-mcp": {
+    "added": 293,
+    "deleted": 0,
+    "net": 293
+  },
   "dbt-duckdb": {
-    "added": 10,
-    "deleted": 7,
-    "net": 3
+    "added": 21,
+    "deleted": 9,
+    "net": 12
   },
   "devopen": {
-    "added": 9,
-    "deleted": 0,
+    "added": 11,
+    "deleted": 2,
     "net": 9
   },
   "ftn": {
-    "added": 3400,
-    "deleted": 2935,
-    "net": 465
+    "added": 6941,
+    "deleted": 7323,
+    "net": -382
   },
-  "generated_at": "2026-08-20T00:28:28.646505+00:00",
+  "generated_at": "2026-08-24T06:02:36.801335+00:00",
   "github-stats": {
-    "added": 378,
-    "deleted": 36,
-    "net": 342
+    "added": 816,
+    "deleted": 182,
+    "net": 634
   },
   "goose-recipes": {
-    "added": 185,
-    "deleted": 3,
-    "net": 182
+    "added": 11,
+    "deleted": 2,
+    "net": 9
   },
   "huddle-concept": {
     "added": 0,
@@ -46,19 +56,14 @@
     "net": 0
   },
   "mailroom": {
-    "added": 18824,
-    "deleted": 868,
-    "net": 17956
+    "added": 10048,
+    "deleted": 1987,
+    "net": 8061
   },
   "nas-port-mcp": {
-    "added": 384,
-    "deleted": 32,
-    "net": 352
-  },
-  "nas-port-mcp-regen-check": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 26,
+    "deleted": 15,
+    "net": 11
   },
   "openclaw-nas": {
     "added": 0,
@@ -66,14 +71,19 @@
     "net": 0
   },
   "parquet-peek": {
-    "added": 7341,
-    "deleted": 382,
-    "net": 6959
+    "added": 1600,
+    "deleted": 82,
+    "net": 1518
+  },
+  "pshelf": {
+    "added": 10941,
+    "deleted": 690,
+    "net": 10251
   },
   "stripe-toddler": {
-    "added": 45,
-    "deleted": 6,
-    "net": 39
+    "added": 2,
+    "deleted": 12,
+    "net": -10
   },
   "tdarr-nas": {
     "added": 0,
