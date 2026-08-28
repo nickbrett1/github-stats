@@ -123,8 +123,14 @@ function renderTable() {
     + cell(totalDeleted, totalDeleted > 0 ? "neg" : "zero")
     + cell(totalNet, netCls(totalNet)) + "</tr></tbody></table>";
   document.getElementById("content").innerHTML = html;
-  const gen = data.generated_at ? new Date(data.generated_at).toLocaleString() : "unknown";
-  document.getElementById("meta").textContent = "Last 7 days · Updated " + gen + " — regenerated weekly by GitHub Actions";
+  const gen = (iso) => {
+    if (!iso) return "unknown";
+    const d = new Date(iso);
+    const day = d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+    const time = d.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
+    return day + " " + time;
+  };
+  document.getElementById("meta").textContent = "Last 7 days · Updated " + gen(data.generated_at) + " — regenerated weekly by GitHub Actions";
 }
 
 load();
