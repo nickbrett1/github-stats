@@ -9,6 +9,11 @@
     "deleted": 0,
     "net": 0
   },
+  "circleci-stats": {
+    "added": 1144,
+    "deleted": 544,
+    "net": 600
+  },
   "dagster-tutorial": {
     "added": 0,
     "deleted": 0,
@@ -25,9 +30,9 @@
     "net": 293
   },
   "dbt-duckdb": {
-    "added": 21,
-    "deleted": 9,
-    "net": 12
+    "added": 12,
+    "deleted": 3,
+    "net": 9
   },
   "devopen": {
     "added": 11,
@@ -35,20 +40,20 @@
     "net": 9
   },
   "ftn": {
-    "added": 6941,
-    "deleted": 7323,
-    "net": -382
+    "added": 5423,
+    "deleted": 7775,
+    "net": -2352
   },
-  "generated_at": "2026-08-24T06:02:36.801335+00:00",
+  "generated_at": "2026-08-28T10:25:59.437271+00:00",
   "github-stats": {
-    "added": 816,
-    "deleted": 182,
-    "net": 634
+    "added": 53,
+    "deleted": 37,
+    "net": 16
   },
   "goose-recipes": {
-    "added": 11,
-    "deleted": 2,
-    "net": 9
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "huddle-concept": {
     "added": 0,
@@ -56,14 +61,14 @@
     "net": 0
   },
   "mailroom": {
-    "added": 10048,
-    "deleted": 1987,
-    "net": 8061
+    "added": 5026,
+    "deleted": 435,
+    "net": 4591
   },
   "nas-port-mcp": {
-    "added": 26,
-    "deleted": 15,
-    "net": 11
+    "added": 51,
+    "deleted": 11,
+    "net": 40
   },
   "openclaw-nas": {
     "added": 0,
@@ -71,18 +76,18 @@
     "net": 0
   },
   "parquet-peek": {
-    "added": 1600,
-    "deleted": 82,
-    "net": 1518
+    "added": 114,
+    "deleted": 114,
+    "net": 0
   },
   "pshelf": {
-    "added": 10941,
-    "deleted": 690,
-    "net": 10251
+    "added": 18581,
+    "deleted": 2655,
+    "net": 15926
   },
   "stripe-toddler": {
-    "added": 2,
-    "deleted": 12,
+    "added": 3,
+    "deleted": 13,
     "net": -10
   },
   "tdarr-nas": {
