@@ -1,8 +1,8 @@
 {
   "agent-swarm": {
-    "added": 173,
-    "deleted": 198,
-    "net": -25
+    "added": 53,
+    "deleted": 53,
+    "net": 0
   },
   "agy-telemetry": {
     "added": 0,
@@ -10,9 +10,9 @@
     "net": 0
   },
   "circleci-stats": {
-    "added": 1144,
-    "deleted": 544,
-    "net": 600
+    "added": 1346,
+    "deleted": 736,
+    "net": 610
   },
   "dagster-tutorial": {
     "added": 0,
@@ -20,40 +20,50 @@
     "net": 0
   },
   "dagu-dags": {
-    "added": 32,
-    "deleted": 5,
-    "net": 27
+    "added": 8,
+    "deleted": 0,
+    "net": 8
   },
   "dagu-mcp": {
-    "added": 293,
-    "deleted": 0,
-    "net": 293
+    "added": 34,
+    "deleted": 19,
+    "net": 15
   },
   "dbt-duckdb": {
-    "added": 12,
-    "deleted": 3,
-    "net": 9
+    "added": 1,
+    "deleted": 1,
+    "net": 0
+  },
+  "deepseek-balance": {
+    "added": 4556,
+    "deleted": 261,
+    "net": 4295
   },
   "devopen": {
-    "added": 11,
-    "deleted": 2,
-    "net": 9
+    "added": 878,
+    "deleted": 1167,
+    "net": -289
   },
   "ftn": {
-    "added": 5423,
-    "deleted": 7775,
-    "net": -2352
+    "added": 1450,
+    "deleted": 2850,
+    "net": -1400
   },
-  "generated_at": "2026-08-28T10:25:59.437271+00:00",
+  "gaggle": {
+    "added": 14898,
+    "deleted": 7097,
+    "net": 7801
+  },
+  "generated_at": "2026-08-31T11:43:45.269065+00:00",
   "github-stats": {
-    "added": 53,
-    "deleted": 37,
-    "net": 16
+    "added": 40,
+    "deleted": 29,
+    "net": 11
   },
   "goose-recipes": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 101,
+    "deleted": 17,
+    "net": 84
   },
   "huddle-concept": {
     "added": 0,
@@ -61,14 +71,14 @@
     "net": 0
   },
   "mailroom": {
-    "added": 5026,
-    "deleted": 435,
-    "net": 4591
+    "added": 2602,
+    "deleted": 427,
+    "net": 2175
   },
   "nas-port-mcp": {
-    "added": 51,
-    "deleted": 11,
-    "net": 40
+    "added": 81,
+    "deleted": 42,
+    "net": 39
   },
   "openclaw-nas": {
     "added": 0,
@@ -76,19 +86,19 @@
     "net": 0
   },
   "parquet-peek": {
-    "added": 114,
-    "deleted": 114,
-    "net": 0
+    "added": 156,
+    "deleted": 154,
+    "net": 2
   },
   "pshelf": {
-    "added": 18581,
-    "deleted": 2655,
-    "net": 15926
+    "added": 7628,
+    "deleted": 2016,
+    "net": 5612
   },
   "stripe-toddler": {
-    "added": 3,
-    "deleted": 13,
-    "net": -10
+    "added": 13,
+    "deleted": 4,
+    "net": 9
   },
   "tdarr-nas": {
     "added": 0,
