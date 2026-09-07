@@ -1,18 +1,23 @@
 {
   "agent-swarm": {
-    "added": 53,
-    "deleted": 53,
-    "net": 0
+    "added": 49,
+    "deleted": 176,
+    "net": -127
   },
   "agy-telemetry": {
     "added": 0,
     "deleted": 0,
     "net": 0
   },
+  "circleci-mcp": {
+    "added": 3948,
+    "deleted": 195,
+    "net": 3753
+  },
   "circleci-stats": {
-    "added": 1346,
-    "deleted": 736,
-    "net": 610
+    "added": 851,
+    "deleted": 801,
+    "net": 50
   },
   "dagster-tutorial": {
     "added": 0,
@@ -20,50 +25,50 @@
     "net": 0
   },
   "dagu-dags": {
-    "added": 8,
-    "deleted": 0,
-    "net": 8
+    "added": 3,
+    "deleted": 3,
+    "net": 0
   },
   "dagu-mcp": {
-    "added": 34,
-    "deleted": 19,
-    "net": 15
+    "added": 3292,
+    "deleted": 240,
+    "net": 3052
   },
   "dbt-duckdb": {
-    "added": 1,
-    "deleted": 1,
+    "added": 0,
+    "deleted": 0,
     "net": 0
   },
   "deepseek-balance": {
-    "added": 4556,
-    "deleted": 261,
-    "net": 4295
+    "added": 2453,
+    "deleted": 894,
+    "net": 1559
   },
   "devopen": {
-    "added": 878,
-    "deleted": 1167,
-    "net": -289
+    "added": 168,
+    "deleted": 48,
+    "net": 120
   },
   "ftn": {
-    "added": 1450,
-    "deleted": 2850,
-    "net": -1400
+    "added": 4162,
+    "deleted": 3954,
+    "net": 208
   },
   "gaggle": {
-    "added": 14898,
-    "deleted": 7097,
-    "net": 7801
+    "added": 6313,
+    "deleted": 1388,
+    "net": 4925
   },
-  "generated_at": "2026-08-31T11:43:45.269065+00:00",
+  "generated_at": "2026-09-07T10:35:07.346917+00:00",
   "github-stats": {
-    "added": 40,
-    "deleted": 29,
-    "net": 11
+    "added": 53,
+    "deleted": 43,
+    "net": 10
   },
   "goose-recipes": {
-    "added": 101,
-    "deleted": 17,
-    "net": 84
+    "added": 12,
+    "deleted": 12,
+    "net": 0
   },
   "huddle-concept": {
     "added": 0,
@@ -71,14 +76,19 @@
     "net": 0
   },
   "mailroom": {
-    "added": 2602,
-    "deleted": 427,
-    "net": 2175
+    "added": 1589,
+    "deleted": 50,
+    "net": 1539
+  },
+  "miniflux-feed-dedup": {
+    "added": 3590,
+    "deleted": 277,
+    "net": 3313
   },
   "nas-port-mcp": {
-    "added": 81,
-    "deleted": 42,
-    "net": 39
+    "added": 14,
+    "deleted": 32,
+    "net": -18
   },
   "openclaw-nas": {
     "added": 0,
@@ -86,23 +96,28 @@
     "net": 0
   },
   "parquet-peek": {
-    "added": 156,
-    "deleted": 154,
-    "net": 2
+    "added": 60,
+    "deleted": 43,
+    "net": 17
   },
   "pshelf": {
-    "added": 7628,
-    "deleted": 2016,
-    "net": 5612
+    "added": 57,
+    "deleted": 44,
+    "net": 13
   },
   "stripe-toddler": {
-    "added": 13,
-    "deleted": 4,
-    "net": 9
+    "added": 30,
+    "deleted": 182,
+    "net": -152
   },
   "tdarr-nas": {
     "added": 0,
     "deleted": 0,
     "net": 0
+  },
+  "vikunja-mcp": {
+    "added": 3541,
+    "deleted": 506,
+    "net": 3035
   }
 }
