@@ -15,9 +15,9 @@
     "net": 3753
   },
   "circleci-stats": {
-    "added": 778,
-    "deleted": 724,
-    "net": 54
+    "added": 792,
+    "deleted": 730,
+    "net": 62
   },
   "dagster-tutorial": {
     "added": 0,
@@ -40,9 +40,9 @@
     "net": 0
   },
   "deepseek-balance": {
-    "added": 3640,
-    "deleted": 636,
-    "net": 3004
+    "added": 3192,
+    "deleted": 555,
+    "net": 2637
   },
   "devopen": {
     "added": 168,
@@ -50,8 +50,8 @@
     "net": 120
   },
   "ftn": {
-    "added": 4410,
-    "deleted": 4062,
+    "added": 4471,
+    "deleted": 4123,
     "net": 348
   },
   "gaggle": {
@@ -59,11 +59,11 @@
     "deleted": 1388,
     "net": 4925
   },
-  "generated_at": "2026-09-07T16:21:07.502670+00:00",
+  "generated_at": "2026-09-07T19:29:04.663081+00:00",
   "github-stats": {
-    "added": 77,
-    "deleted": 48,
-    "net": 29
+    "added": 106,
+    "deleted": 69,
+    "net": 37
   },
   "goose-recipes": {
     "added": 12,
@@ -101,9 +101,9 @@
     "net": 17
   },
   "pshelf": {
-    "added": 113,
-    "deleted": 60,
-    "net": 53
+    "added": 121,
+    "deleted": 88,
+    "net": 33
   },
   "stripe-toddler": {
     "added": 30,
