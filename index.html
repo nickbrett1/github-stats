@@ -135,5 +135,19 @@ function renderTable() {
 
 load();
 </script>
+<script>
+(function () {
+  if (window.parent === window) return;
+  function reportHeight() {
+    try {
+      var h = Math.ceil(document.documentElement.scrollHeight);
+      window.parent.postMessage({ type: 'homepage-iframe-resize', height: h }, '*');
+    } catch (e) {}
+  }
+  if (document.readyState === 'complete') { reportHeight(); }
+  else { window.addEventListener('load', reportHeight); }
+  setInterval(reportHeight, 1500);
+})();
+</script>
 </body>
 </html>
