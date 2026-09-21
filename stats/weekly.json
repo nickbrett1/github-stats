@@ -1,74 +1,84 @@
 {
+  "a2a-goose": {
+    "added": 36449,
+    "deleted": 1224,
+    "net": 35225
+  },
   "agent-swarm": {
-    "added": 187,
-    "deleted": 166,
-    "net": 21
+    "added": 570,
+    "deleted": 46,
+    "net": 524
   },
   "agy-telemetry": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 570,
+    "deleted": 46,
+    "net": 524
   },
   "circleci-mcp": {
-    "added": 121,
-    "deleted": 74,
-    "net": 47
+    "added": 570,
+    "deleted": 46,
+    "net": 524
   },
   "circleci-stats": {
-    "added": 729,
-    "deleted": 717,
-    "net": 12
+    "added": 257,
+    "deleted": 307,
+    "net": -50
   },
   "dagster-tutorial": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 658,
+    "deleted": 47,
+    "net": 611
   },
   "dagu-dags": {
-    "added": 66,
-    "deleted": 35,
-    "net": 31
+    "added": 13,
+    "deleted": 2,
+    "net": 11
   },
   "dagu-mcp": {
-    "added": 121,
-    "deleted": 74,
-    "net": 47
+    "added": 570,
+    "deleted": 46,
+    "net": 524
   },
   "dbt-duckdb": {
-    "added": 207,
-    "deleted": 233,
-    "net": -26
+    "added": 660,
+    "deleted": 50,
+    "net": 610
   },
   "deepseek-balance": {
-    "added": 2992,
-    "deleted": 180,
-    "net": 2812
+    "added": 3026,
+    "deleted": 175,
+    "net": 2851
   },
   "devopen": {
+    "added": 81,
+    "deleted": 8,
+    "net": 73
+  },
+  "ftn": {
+    "added": 2847,
+    "deleted": 437,
+    "net": 2410
+  },
+  "gaggle": {
     "added": 0,
     "deleted": 0,
     "net": 0
   },
-  "ftn": {
-    "added": 7935,
-    "deleted": 22577,
-    "net": -14642
+  "galactic-unicorn": {
+    "added": 9949,
+    "deleted": 1210,
+    "net": 8739
   },
-  "gaggle": {
-    "added": 150,
-    "deleted": 71,
-    "net": 79
-  },
-  "generated_at": "2026-09-14T10:52:04.489935+00:00",
+  "generated_at": "2026-09-21T10:56:35.903615+00:00",
   "genproj": {
-    "added": 42756,
-    "deleted": 1224,
-    "net": 41532
+    "added": 20462,
+    "deleted": 2738,
+    "net": 17724
   },
   "github-stats": {
-    "added": 58,
-    "deleted": 36,
-    "net": 22
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "goose-recipes": {
     "added": 0,
@@ -76,24 +86,29 @@
     "net": 0
   },
   "huddle-concept": {
-    "added": 151,
-    "deleted": 87,
-    "net": 64
+    "added": 625,
+    "deleted": 47,
+    "net": 578
   },
   "mailroom": {
-    "added": 797,
-    "deleted": 136,
-    "net": 661
+    "added": 5409,
+    "deleted": 87,
+    "net": 5322
   },
   "miniflux-feed-dedup": {
-    "added": 121,
-    "deleted": 74,
-    "net": 47
+    "added": 572,
+    "deleted": 46,
+    "net": 526
   },
   "nas-port-mcp": {
-    "added": 121,
-    "deleted": 114,
-    "net": 7
+    "added": 570,
+    "deleted": 46,
+    "net": 524
+  },
+  "netwatch-dash": {
+    "added": 15762,
+    "deleted": 1294,
+    "net": 14468
   },
   "openclaw-nas": {
     "added": 0,
@@ -101,19 +116,24 @@
     "net": 0
   },
   "parquet-peek": {
-    "added": 256,
-    "deleted": 113,
-    "net": 143
+    "added": 572,
+    "deleted": 46,
+    "net": 526
   },
   "pshelf": {
-    "added": 1812,
-    "deleted": 1188,
-    "net": 624
+    "added": 1137,
+    "deleted": 151,
+    "net": 986
+  },
+  "roost": {
+    "added": 5857,
+    "deleted": 1057,
+    "net": 4800
   },
   "stripe-toddler": {
-    "added": 767,
-    "deleted": 519,
-    "net": 248
+    "added": 570,
+    "deleted": 46,
+    "net": 524
   },
   "tdarr-nas": {
     "added": 0,
@@ -121,8 +141,8 @@
     "net": 0
   },
   "vikunja-mcp": {
-    "added": 53,
-    "deleted": 34,
-    "net": 19
+    "added": 572,
+    "deleted": 46,
+    "net": 526
   }
 }
