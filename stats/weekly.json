@@ -1,63 +1,68 @@
 {
   "a2a-goose": {
-    "added": 36449,
-    "deleted": 1224,
-    "net": 35225
+    "added": 5274,
+    "deleted": 94,
+    "net": 5180
   },
   "agent-swarm": {
-    "added": 570,
-    "deleted": 46,
-    "net": 524
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "agy-telemetry": {
-    "added": 570,
-    "deleted": 46,
-    "net": 524
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "circleci-mcp": {
-    "added": 570,
-    "deleted": 46,
-    "net": 524
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "circleci-stats": {
-    "added": 257,
-    "deleted": 307,
-    "net": -50
+    "added": 205,
+    "deleted": 286,
+    "net": -81
   },
   "dagster-tutorial": {
-    "added": 658,
-    "deleted": 47,
-    "net": 611
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "dagu-dags": {
-    "added": 13,
-    "deleted": 2,
-    "net": 11
+    "added": 33,
+    "deleted": 3,
+    "net": 30
   },
   "dagu-mcp": {
-    "added": 570,
-    "deleted": 46,
-    "net": 524
+    "added": 0,
+    "deleted": 0,
+    "net": 0
+  },
+  "databento-discovery": {
+    "added": 5615,
+    "deleted": 140,
+    "net": 5475
   },
   "dbt-duckdb": {
-    "added": 660,
-    "deleted": 50,
-    "net": 610
+    "added": 3,
+    "deleted": 3,
+    "net": 0
   },
   "deepseek-balance": {
-    "added": 3026,
-    "deleted": 175,
-    "net": 2851
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "devopen": {
-    "added": 81,
-    "deleted": 8,
-    "net": 73
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "ftn": {
-    "added": 2847,
-    "deleted": 437,
-    "net": 2410
+    "added": 479,
+    "deleted": 425,
+    "net": 54
   },
   "gaggle": {
     "added": 0,
@@ -65,15 +70,20 @@
     "net": 0
   },
   "galactic-unicorn": {
-    "added": 9949,
-    "deleted": 1210,
-    "net": 8739
+    "added": 8202,
+    "deleted": 749,
+    "net": 7453
   },
-  "generated_at": "2026-09-21T10:56:35.903615+00:00",
+  "galactic-unicorn-remote": {
+    "added": 27665,
+    "deleted": 422,
+    "net": 27243
+  },
+  "generated_at": "2026-09-28T11:52:11.172353+00:00",
   "genproj": {
-    "added": 20462,
-    "deleted": 2738,
-    "net": 17724
+    "added": 2560,
+    "deleted": 507,
+    "net": 2053
   },
   "github-stats": {
     "added": 0,
@@ -86,29 +96,29 @@
     "net": 0
   },
   "huddle-concept": {
-    "added": 625,
-    "deleted": 47,
-    "net": 578
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "mailroom": {
-    "added": 5409,
-    "deleted": 87,
-    "net": 5322
+    "added": 134,
+    "deleted": 10,
+    "net": 124
   },
   "miniflux-feed-dedup": {
-    "added": 572,
-    "deleted": 46,
-    "net": 526
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "nas-port-mcp": {
-    "added": 570,
-    "deleted": 46,
-    "net": 524
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "netwatch-dash": {
-    "added": 15762,
-    "deleted": 1294,
-    "net": 14468
+    "added": 431,
+    "deleted": 496,
+    "net": -65
   },
   "openclaw-nas": {
     "added": 0,
@@ -116,24 +126,24 @@
     "net": 0
   },
   "parquet-peek": {
-    "added": 572,
-    "deleted": 46,
-    "net": 526
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "pshelf": {
-    "added": 1137,
-    "deleted": 151,
-    "net": 986
+    "added": 432,
+    "deleted": 85,
+    "net": 347
   },
   "roost": {
-    "added": 5857,
-    "deleted": 1057,
-    "net": 4800
+    "added": 10235,
+    "deleted": 1379,
+    "net": 8856
   },
   "stripe-toddler": {
-    "added": 570,
-    "deleted": 46,
-    "net": 524
+    "added": 32,
+    "deleted": 32,
+    "net": 0
   },
   "tdarr-nas": {
     "added": 0,
@@ -141,8 +151,8 @@
     "net": 0
   },
   "vikunja-mcp": {
-    "added": 572,
-    "deleted": 46,
-    "net": 526
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   }
 }
