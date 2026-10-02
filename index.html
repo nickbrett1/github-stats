@@ -85,7 +85,7 @@ function renderTrendLine() {
     circles += '<circle cx="' + cx + '" cy="' + cy + '" r="2.4" fill="' + c + '">'
       + "<title>" + s.week + ": " + (s.net >= 0 ? "+" : "") + s.net + " net lines</title></circle>";
     if (i === 0 || i === series.length - 1 || i % 2 === 1) {
-      labels += '<text x="' + cx + '" y="' + (H - 5) + '" font-size="8" text-anchor="middle" opacity=".55">' + s.week.slice(5) + "</text>";
+      labels += '<text x="' + cx + '" y="' + (H - 5) + '" font-size="8" text-anchor="middle" fill="currentColor" opacity=".7">' + s.week.slice(5) + "</text>";
     }
   });
   const svg = '<svg viewBox="0 0 ' + W + " " + H + '" style="width:100%;max-width:420px" preserveAspectRatio="xMidYMid meet">'
