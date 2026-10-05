@@ -1,8 +1,8 @@
 {
   "a2a-goose": {
-    "added": 397,
-    "deleted": 15,
-    "net": 382
+    "added": 4,
+    "deleted": 4,
+    "net": 0
   },
   "agent-swarm": {
     "added": 0,
@@ -20,9 +20,9 @@
     "net": 0
   },
   "circleci-stats": {
-    "added": 128,
-    "deleted": 179,
-    "net": -51
+    "added": 117,
+    "deleted": 117,
+    "net": 0
   },
   "dagster-tutorial": {
     "added": 0,
@@ -30,19 +30,24 @@
     "net": 0
   },
   "dagu-dags": {
-    "added": 33,
-    "deleted": 3,
-    "net": 30
+    "added": 8,
+    "deleted": 0,
+    "net": 8
   },
   "dagu-mcp": {
     "added": 0,
     "deleted": 0,
     "net": 0
   },
+  "data-sourcing-agent": {
+    "added": 11674,
+    "deleted": 517,
+    "net": 11157
+  },
   "databento-discovery": {
-    "added": 5615,
-    "deleted": 140,
-    "net": 5475
+    "added": 738,
+    "deleted": 13,
+    "net": 725
   },
   "dbt-duckdb": {
     "added": 3,
@@ -55,9 +60,9 @@
     "net": 0
   },
   "devdash": {
-    "added": 13088,
-    "deleted": 947,
-    "net": 12141
+    "added": 14909,
+    "deleted": 1233,
+    "net": 13676
   },
   "devopen": {
     "added": 21,
@@ -70,8 +75,8 @@
     "net": 1659
   },
   "ftn": {
-    "added": 422,
-    "deleted": 476,
+    "added": 399,
+    "deleted": 453,
     "net": -54
   },
   "gaggle": {
@@ -80,24 +85,24 @@
     "net": 0
   },
   "galactic-unicorn": {
-    "added": 10783,
-    "deleted": 986,
-    "net": 9797
+    "added": 4819,
+    "deleted": 295,
+    "net": 4524
   },
   "galactic-unicorn-remote": {
-    "added": 5376,
-    "deleted": 390,
-    "net": 4986
+    "added": 2731,
+    "deleted": 247,
+    "net": 2484
   },
-  "generated_at": "2026-10-02T10:36:33.350804+00:00",
+  "generated_at": "2026-10-05T12:28:32.848263+00:00",
   "genproj": {
-    "added": 749,
-    "deleted": 63,
-    "net": 686
+    "added": 8186,
+    "deleted": 572,
+    "net": 7614
   },
   "github-stats": {
-    "added": 84,
-    "deleted": 74,
+    "added": 52,
+    "deleted": 42,
     "net": 10
   },
   "goose-recipes": {
@@ -125,10 +130,15 @@
     "deleted": 0,
     "net": 0
   },
+  "nas-reach-mcp": {
+    "added": 7730,
+    "deleted": 211,
+    "net": 7519
+  },
   "netwatch-dash": {
-    "added": 463,
-    "deleted": 50,
-    "net": 413
+    "added": 715,
+    "deleted": 77,
+    "net": 638
   },
   "openclaw-nas": {
     "added": 0,
@@ -146,9 +156,9 @@
     "net": 0
   },
   "roost": {
-    "added": 2206,
-    "deleted": 882,
-    "net": 1324
+    "added": 217,
+    "deleted": 76,
+    "net": 141
   },
   "stripe-toddler": {
     "added": 69,
