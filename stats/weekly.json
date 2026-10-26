@@ -1,7 +1,7 @@
 {
   "a2a-goose": {
-    "added": 2,
-    "deleted": 2,
+    "added": 4,
+    "deleted": 4,
     "net": 0
   },
   "agent-swarm": {
@@ -14,6 +14,11 @@
     "deleted": 0,
     "net": 0
   },
+  "backup-dash": {
+    "added": 15328,
+    "deleted": 538,
+    "net": 14790
+  },
   "bd": {
     "added": 0,
     "deleted": 0,
@@ -25,8 +30,8 @@
     "net": 0
   },
   "circleci-stats": {
-    "added": 77,
-    "deleted": 77,
+    "added": 76,
+    "deleted": 76,
     "net": 0
   },
   "dagster-tutorial": {
@@ -35,19 +40,24 @@
     "net": 0
   },
   "dagu-dags": {
-    "added": 131,
-    "deleted": 8,
-    "net": 123
+    "added": 3990,
+    "deleted": 1095,
+    "net": 2895
   },
   "dagu-mcp": {
     "added": 0,
     "deleted": 0,
     "net": 0
   },
+  "data-scout": {
+    "added": 11070,
+    "deleted": 150,
+    "net": 10920
+  },
   "data-sourcing-agent": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 47,
+    "deleted": 9,
+    "net": 38
   },
   "databento-discovery": {
     "added": 0,
@@ -65,24 +75,24 @@
     "net": 0
   },
   "devdash": {
-    "added": 1354,
-    "deleted": 91,
-    "net": 1263
+    "added": 1,
+    "deleted": 1,
+    "net": 0
   },
   "devopen": {
-    "added": 194,
-    "deleted": 20,
-    "net": 174
-  },
-  "devreap": {
-    "added": 32,
-    "deleted": 9,
-    "net": 23
-  },
-  "ftn": {
     "added": 0,
     "deleted": 0,
     "net": 0
+  },
+  "devreap": {
+    "added": 0,
+    "deleted": 0,
+    "net": 0
+  },
+  "ftn": {
+    "added": 142,
+    "deleted": 114,
+    "net": 28
   },
   "gaggle": {
     "added": 0,
@@ -90,35 +100,35 @@
     "net": 0
   },
   "galactic-unicorn": {
-    "added": 156,
-    "deleted": 6,
-    "net": 150
+    "added": 645,
+    "deleted": 63,
+    "net": 582
   },
   "galactic-unicorn-remote": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 167,
+    "deleted": 52,
+    "net": 115
   },
   "gallery": {
-    "added": 14039,
-    "deleted": 297,
-    "net": 13742
+    "added": 1778,
+    "deleted": 24,
+    "net": 1754
   },
-  "generated_at": "2026-10-19T11:02:55.613716+00:00",
+  "generated_at": "2026-10-26T11:21:30.814245+00:00",
   "genproj": {
-    "added": 1872,
-    "deleted": 450,
-    "net": 1422
+    "added": 1946,
+    "deleted": 104,
+    "net": 1842
   },
   "github-stats": {
-    "added": 85,
-    "deleted": 60,
-    "net": 25
-  },
-  "goose-recipes": {
     "added": 0,
     "deleted": 0,
     "net": 0
+  },
+  "goose-recipes": {
+    "added": 52,
+    "deleted": 12,
+    "net": 40
   },
   "huddle-concept": {
     "added": 0,
@@ -126,8 +136,8 @@
     "net": 0
   },
   "mailroom": {
-    "added": 2,
-    "deleted": 2,
+    "added": 3,
+    "deleted": 3,
     "net": 0
   },
   "marketdata-requests": {
@@ -151,14 +161,14 @@
     "net": 0
   },
   "netwatch-dash": {
-    "added": 545,
-    "deleted": 182,
-    "net": 363
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "notes-mcp": {
-    "added": 1229,
-    "deleted": 66,
-    "net": 1163
+    "added": 1,
+    "deleted": 1,
+    "net": 0
   },
   "openclaw-nas": {
     "added": 0,
@@ -176,24 +186,29 @@
     "net": 0
   },
   "reader": {
-    "added": 10685,
-    "deleted": 438,
-    "net": 10247
+    "added": 2251,
+    "deleted": 19,
+    "net": 2232
   },
   "roost": {
-    "added": 4,
-    "deleted": 4,
+    "added": 2,
+    "deleted": 2,
     "net": 0
   },
   "stripe-toddler": {
-    "added": 4,
-    "deleted": 4,
+    "added": 0,
+    "deleted": 0,
     "net": 0
   },
   "tdarr-nas": {
     "added": 0,
     "deleted": 0,
     "net": 0
+  },
+  "um790-backup": {
+    "added": 10082,
+    "deleted": 1613,
+    "net": 8469
   },
   "vikunja-mcp": {
     "added": 0,
