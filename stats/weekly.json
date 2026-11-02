@@ -1,8 +1,8 @@
 {
   "a2a-goose": {
-    "added": 4,
-    "deleted": 4,
-    "net": 0
+    "added": 23,
+    "deleted": 7,
+    "net": 16
   },
   "agent-swarm": {
     "added": 0,
@@ -15,54 +15,54 @@
     "net": 0
   },
   "backup-dash": {
-    "added": 15328,
-    "deleted": 538,
-    "net": 14790
+    "added": 311,
+    "deleted": 96,
+    "net": 215
   },
   "bd": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 21,
+    "deleted": 5,
+    "net": 16
   },
   "circleci-mcp": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 11,
+    "deleted": 1,
+    "net": 10
   },
   "circleci-stats": {
-    "added": 76,
-    "deleted": 76,
+    "added": 71,
+    "deleted": 71,
     "net": 0
   },
   "dagster-tutorial": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 11,
+    "deleted": 1,
+    "net": 10
   },
   "dagu-dags": {
-    "added": 3990,
-    "deleted": 1095,
-    "net": 2895
+    "added": 470,
+    "deleted": 262,
+    "net": 208
   },
   "dagu-mcp": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 11,
+    "deleted": 1,
+    "net": 10
   },
   "data-scout": {
-    "added": 11070,
-    "deleted": 150,
-    "net": 10920
+    "added": 13813,
+    "deleted": 1881,
+    "net": 11932
   },
   "data-sourcing-agent": {
-    "added": 47,
-    "deleted": 9,
-    "net": 38
+    "added": 22,
+    "deleted": 6,
+    "net": 16
   },
   "databento-discovery": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 21,
+    "deleted": 5,
+    "net": 16
   },
   "dbt-duckdb": {
     "added": 1,
@@ -70,14 +70,14 @@
     "net": 0
   },
   "deepseek-balance": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 47,
+    "deleted": 7,
+    "net": 40
   },
   "devdash": {
-    "added": 1,
-    "deleted": 1,
-    "net": 0
+    "added": 22,
+    "deleted": 6,
+    "net": 16
   },
   "devopen": {
     "added": 0,
@@ -90,9 +90,9 @@
     "net": 0
   },
   "ftn": {
-    "added": 142,
-    "deleted": 114,
-    "net": 28
+    "added": 71,
+    "deleted": 58,
+    "net": 13
   },
   "gaggle": {
     "added": 0,
@@ -100,25 +100,25 @@
     "net": 0
   },
   "galactic-unicorn": {
-    "added": 645,
-    "deleted": 63,
-    "net": 582
+    "added": 21,
+    "deleted": 5,
+    "net": 16
   },
   "galactic-unicorn-remote": {
-    "added": 167,
-    "deleted": 52,
-    "net": 115
+    "added": 350,
+    "deleted": 113,
+    "net": 237
   },
   "gallery": {
-    "added": 1778,
-    "deleted": 24,
-    "net": 1754
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
-  "generated_at": "2026-10-26T11:21:30.814245+00:00",
+  "generated_at": "2026-11-02T13:43:24.045354+00:00",
   "genproj": {
-    "added": 1946,
-    "deleted": 104,
-    "net": 1842
+    "added": 377,
+    "deleted": 91,
+    "net": 286
   },
   "github-stats": {
     "added": 0,
@@ -126,9 +126,9 @@
     "net": 0
   },
   "goose-recipes": {
-    "added": 52,
-    "deleted": 12,
-    "net": 40
+    "added": 0,
+    "deleted": 0,
+    "net": 0
   },
   "huddle-concept": {
     "added": 0,
@@ -136,9 +136,9 @@
     "net": 0
   },
   "mailroom": {
-    "added": 3,
-    "deleted": 3,
-    "net": 0
+    "added": 24,
+    "deleted": 8,
+    "net": 16
   },
   "marketdata-requests": {
     "added": 0,
@@ -146,29 +146,29 @@
     "net": 0
   },
   "miniflux-feed-dedup": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 11,
+    "deleted": 1,
+    "net": 10
   },
   "nas-port-mcp": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 25,
+    "deleted": 1,
+    "net": 24
   },
   "nas-reach-mcp": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 53,
+    "deleted": 8,
+    "net": 45
   },
   "netwatch-dash": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 21,
+    "deleted": 5,
+    "net": 16
   },
   "notes-mcp": {
-    "added": 1,
-    "deleted": 1,
-    "net": 0
+    "added": 195,
+    "deleted": 4,
+    "net": 191
   },
   "openclaw-nas": {
     "added": 0,
@@ -186,19 +186,19 @@
     "net": 0
   },
   "reader": {
-    "added": 2251,
-    "deleted": 19,
-    "net": 2232
+    "added": 21,
+    "deleted": 5,
+    "net": 16
   },
   "roost": {
-    "added": 2,
-    "deleted": 2,
-    "net": 0
+    "added": 11,
+    "deleted": 1,
+    "net": 10
   },
   "stripe-toddler": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 289,
+    "deleted": 273,
+    "net": 16
   },
   "tdarr-nas": {
     "added": 0,
@@ -206,13 +206,13 @@
     "net": 0
   },
   "um790-backup": {
-    "added": 10082,
-    "deleted": 1613,
-    "net": 8469
+    "added": 1325,
+    "deleted": 180,
+    "net": 1145
   },
   "vikunja-mcp": {
-    "added": 0,
-    "deleted": 0,
-    "net": 0
+    "added": 11,
+    "deleted": 1,
+    "net": 10
   }
 }
