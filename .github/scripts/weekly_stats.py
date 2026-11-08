@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
-"""Weekly GitHub diff stats — lines added/deleted per owned repo.
+"""Rolling GitHub diff stats — lines added/deleted per owned repo, bucketed by UTC day.
 
 Writes:
-  stats/weekly.json  — current 7-day snapshot {generated_at, <repo>: {added, deleted, net}}
-  stats/history.json — accumulated weekly snapshots {"weeks": [{"week": <Mon-date>, "repos": {...}}, ...]}
-                       (idempotent; --backfill N seeds the previous N weeks; never trimmed)
+  stats/daily.json   rolling window, oldest day first:
+                     {"generated_at": iso, "window_days": 7,
+                      "days": [{"date": "YYYY-MM-DD", "repos": {name: {added, deleted, net}}}]}
+  stats/weekly.json  flat 7-day totals, same shape as before
+                     {"generated_at": iso, <repo>: {added, deleted, net}}   (legacy/consumers)
+
+One pass over the window: commits are fetched once per repo for [start, now) and
+flagged into per-day buckets by their committer date, so a daily run costs the
+same number of API calls as the old weekly run.
 
 Requires GH_TOKEN (fine-grained PAT with read access to repositories).
 """
@@ -31,66 +37,96 @@ def gh(path):
     return data
 
 
-def monday_of(d):
-    return (d - dt.timedelta(days=d.weekday())).date()
+def day_of(ts):
+    """'2026-11-02T13:43:24Z' -> '2026-11-02' (UTC)."""
+    return dt.datetime.fromisoformat(ts.replace("Z", "+00:00")).astimezone(
+        dt.timezone.utc
+    ).date().isoformat()
 
 
-def compute_week(repos, since, until, max_commits):
-    """Aggregate additions/deletions for commits in [since, until) (ISO strings)."""
-    stats = {}
+def fetch_commits(repo, since, until, max_commits):
+    commits = []
+    page = 1
+    while len(commits) < max_commits:
+        url = (
+            f"/repos/{repo['full_name']}/commits?sha={repo['default_branch']}"
+            f"&since={urllib.parse.quote(since)}&until={urllib.parse.quote(until)}"
+            f"&per_page=100&page={page}"
+        )
+        batch = gh(url)
+        if not batch:
+            break
+        commits.extend(batch)
+        if len(batch) < 100:
+            break
+        page += 1
+    return commits[:max_commits]
+
+
+def compute_window(repos, start_day, until, max_commits):
+    """Return (per_day, totals) for [start_day 00:00 UTC, until).
+
+    per_day: {"YYYY-MM-DD": {repo: {added, deleted, net}}} for every day in the
+    window, including quiet days (so the chart has no gaps).
+    totals:  {repo: {added, deleted, net}} across the whole window.
+    """
+    n_days = (until.date() - start_day).days + 1
+    per_day = {
+        (start_day + dt.timedelta(days=i)).isoformat(): {} for i in range(n_days)
+    }
+    totals = {}
+    since = dt.datetime.combine(start_day, dt.time.min, tzinfo=dt.timezone.utc)
+    since_iso = since.isoformat()
+    until_iso = until.isoformat()
+
     for repo in repos:
         name = repo["name"]
-        branch = repo["default_branch"]
         try:
-            commits = []
-            page = 1
-            while len(commits) < max_commits:
-                url = (
-                    f"/repos/{repo['full_name']}/commits?sha={branch}"
-                    f"&since={urllib.parse.quote(since)}&until={urllib.parse.quote(until)}"
-                    f"&per_page=100&page={page}"
-                )
-                batch = gh(url)
-                if not batch:
-                    break
-                commits.extend(batch)
-                if len(batch) < 100:
-                    break
-                page += 1
-            commits = commits[:max_commits]
-
-            added = deleted = 0
+            commits = fetch_commits(repo, since_iso, until_iso, max_commits)
+            buckets = {}
             for c in commits:
-                msg = (c.get("commit", {}).get("message", "") or "")
+                msg = c.get("commit", {}).get("message", "") or ""
                 if msg.startswith("Merge "):
                     continue  # squash-merge PRs already attribute to the merge commit
                 detail = gh(f"/repos/{repo['full_name']}/commits/{c['sha']}")
-                added += detail.get("stats", {}).get("additions", 0)
-                deleted += detail.get("stats", {}).get("deletions", 0)
+                st = detail.get("stats", {})
+                a = st.get("additions", 0)
+                d = st.get("deletions", 0)
+                ts = (
+                    (c.get("commit", {}).get("committer") or {}).get("date")
+                    or (c.get("commit", {}).get("author") or {}).get("date")
+                )
+                if not ts:
+                    continue
+                day = day_of(ts)
+                if day not in per_day:
+                    continue  # landed outside the window (clock skew / rebase)
+                row = buckets.setdefault(day, {"added": 0, "deleted": 0, "net": 0})
+                row["added"] += a
+                row["deleted"] += d
+                row["net"] = row["added"] - row["deleted"]
 
-            stats[name] = {"added": added, "deleted": deleted, "net": added - deleted}
+            for day, row in buckets.items():
+                per_day[day][name] = row
+                t = totals.setdefault(name, {"added": 0, "deleted": 0, "net": 0})
+                t["added"] += row["added"]
+                t["deleted"] += row["deleted"]
+                t["net"] = t["added"] - t["deleted"]
         except Exception as e:
             print(f"WARN: skipping {name}: {e}", file=sys.stderr)
-    return stats
-
-
-def load_json(path, default):
-    try:
-        with open(path) as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return default
+    return per_day, totals
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--days", type=int, default=7)
-    ap.add_argument("--out", default="stats/weekly.json")
-    ap.add_argument("--history", default="stats/history.json")
+    ap.add_argument("--days", type=int, default=7, help="rolling window length")
+    ap.add_argument("--out", default="stats/daily.json")
+    ap.add_argument("--legacy", default="stats/weekly.json",
+                    help="flat 7-day totals, same shape as the old weekly.json")
     ap.add_argument("--max-commits", type=int, default=200)
-    ap.add_argument("--backfill", type=int, default=0,
-                    help="seed the previous N weeks of history (idempotent)")
     args = ap.parse_args()
+    if args.days < 1:
+        ap.error("--days must be >= 1")
 
     try:
         repos = gh("/user/repos?affiliation=owner&per_page=100&sort=updated")
@@ -100,40 +136,35 @@ def main():
     repos = [r for r in repos if not r["fork"] and not r["archived"]]
 
     now = dt.datetime.now(dt.timezone.utc)
-    history = load_json(args.history, {"weeks": []})
-    seen = {w["week"] for w in history.get("weeks", [])}
+    start_day = (now - dt.timedelta(days=args.days - 1)).date()
 
-    def add_week(week_key, end_dt, since, until, label=""):
-        if week_key in seen:
-            print(f"skip {week_key} (already in history)")
-            return
-        print(f"computing week {week_key} ({label}) ...", end=" ", flush=True)
-        stats = compute_week(repos, since, until, args.max_commits)
-        history.setdefault("weeks", []).append({"week": week_key, "repos": stats})
-        seen.add(week_key)
-        active = sum(1 for s in stats.values() if s["added"] or s["deleted"])
-        print(f"{active} active repos")
-
-    cur_key = monday_of(now).isoformat()
-    add_week(cur_key, now, (now - dt.timedelta(days=args.days)).isoformat(), now.isoformat(), "current")
-
-    for k in range(1, args.backfill + 1):
-        end = now - dt.timedelta(days=7 * k)
-        week_key = monday_of(end).isoformat()
-        since = (end - dt.timedelta(days=args.days)).isoformat()
-        add_week(week_key, end, since, end.isoformat(), f"backfill {k}")
-
-    history["weeks"].sort(key=lambda w: w["week"])
+    per_day, totals = compute_window(repos, start_day, now, args.max_commits)
+    days = [
+        {"date": day, "repos": per_day[day]} for day in sorted(per_day)
+    ]
 
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
-    cur = history["weeks"][-1]["repos"] if history["weeks"] else {}
-    out = {"generated_at": now.isoformat()}
-    out.update(cur)
     with open(args.out, "w") as f:
+        json.dump(
+            {
+                "generated_at": now.isoformat(),
+                "window_days": args.days,
+                "days": days,
+            },
+            f,
+            indent=2,
+            sort_keys=True,
+        )
+    out = {"generated_at": now.isoformat()}
+    out.update(totals)
+    with open(args.legacy, "w") as f:
         json.dump(out, f, indent=2, sort_keys=True)
-    with open(args.history, "w") as f:
-        json.dump(history, f, indent=2, sort_keys=True)
-    print(f"wrote {args.out} + {args.history}: {len(history['weeks'])} weeks in history")
+
+    active = sum(1 for s in totals.values() if s["added"] or s["deleted"])
+    print(
+        f"wrote {args.out} ({len(days)} days) + {args.legacy} "
+        f"({active} active repos of {len(repos)})"
+    )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,181 @@
+{
+  "days": [
+    {
+      "date": "2026-11-02",
+      "repos": {
+        "circleci-stats": {
+          "added": 8,
+          "deleted": 8,
+          "net": 0
+        },
+        "data-scout": {
+          "added": 331,
+          "deleted": 57,
+          "net": 274
+        },
+        "github-stats": {
+          "added": 90,
+          "deleted": 90,
+          "net": 0
+        }
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "repos": {
+        "circleci-stats": {
+          "added": 9,
+          "deleted": 9,
+          "net": 0
+        },
+        "dagu-dags": {
+          "added": 1,
+          "deleted": 1,
+          "net": 0
+        },
+        "dbt-duckdb": {
+          "added": 1,
+          "deleted": 1,
+          "net": 0
+        },
+        "game-catalog": {
+          "added": 130,
+          "deleted": 79,
+          "net": 51
+        },
+        "um790-backup": {
+          "added": 3,
+          "deleted": 3,
+          "net": 0
+        }
+      }
+    },
+    {
+      "date": "2026-11-04",
+      "repos": {
+        "circleci-stats": {
+          "added": 9,
+          "deleted": 9,
+          "net": 0
+        },
+        "dagu-dags": {
+          "added": 360,
+          "deleted": 224,
+          "net": 136
+        },
+        "genproj": {
+          "added": 914,
+          "deleted": 36,
+          "net": 878
+        },
+        "stratechery-archive": {
+          "added": 7751,
+          "deleted": 223,
+          "net": 7528
+        }
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "repos": {
+        "circleci-stats": {
+          "added": 8,
+          "deleted": 8,
+          "net": 0
+        },
+        "dagu-dags": {
+          "added": 26,
+          "deleted": 2,
+          "net": 24
+        },
+        "devdash": {
+          "added": 1,
+          "deleted": 1,
+          "net": 0
+        },
+        "galactic-unicorn": {
+          "added": 98,
+          "deleted": 6,
+          "net": 92
+        },
+        "galactic-unicorn-remote": {
+          "added": 86,
+          "deleted": 9,
+          "net": 77
+        },
+        "stratechery-search": {
+          "added": 14921,
+          "deleted": 728,
+          "net": 14193
+        },
+        "um790-backup": {
+          "added": 24,
+          "deleted": 0,
+          "net": 24
+        }
+      }
+    },
+    {
+      "date": "2026-11-06",
+      "repos": {
+        "circleci-stats": {
+          "added": 9,
+          "deleted": 9,
+          "net": 0
+        },
+        "stratechery-search": {
+          "added": 3112,
+          "deleted": 797,
+          "net": 2315
+        }
+      }
+    },
+    {
+      "date": "2026-11-07",
+      "repos": {
+        "circleci-stats": {
+          "added": 10,
+          "deleted": 10,
+          "net": 0
+        },
+        "deepseek-balance": {
+          "added": 523,
+          "deleted": 38,
+          "net": 485
+        },
+        "stratechery-search": {
+          "added": 6532,
+          "deleted": 659,
+          "net": 5873
+        }
+      }
+    },
+    {
+      "date": "2026-11-08",
+      "repos": {
+        "circleci-stats": {
+          "added": 9,
+          "deleted": 9,
+          "net": 0
+        },
+        "deepseek-balance": {
+          "added": 328,
+          "deleted": 8,
+          "net": 320
+        },
+        "genproj": {
+          "added": 136,
+          "deleted": 121,
+          "net": 15
+        },
+        "stratechery-search": {
+          "added": 3688,
+          "deleted": 243,
+          "net": 3445
+        }
+      }
+    }
+  ],
+  "generated_at": "2026-11-08T23:31:08.940800+00:00",
+  "window_days": 7
+}
