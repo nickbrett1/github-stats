@@ -155,10 +155,12 @@ def main():
             indent=2,
             sort_keys=True,
         )
+        f.write("\n")
     out = {"generated_at": now.isoformat()}
     out.update(totals)
     with open(args.legacy, "w") as f:
         json.dump(out, f, indent=2, sort_keys=True)
+        f.write("\n")
 
     active = sum(1 for s in totals.values() if s["added"] or s["deleted"])
     print(
