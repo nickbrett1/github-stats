@@ -2,15 +2,17 @@
 """Rolling GitHub diff stats — lines added/deleted per owned repo, bucketed by UTC day.
 
 Writes:
-  stats/daily.json   rolling window, oldest day first:
+  stats/daily.json   rolling window of complete days, oldest day first:
                      {"generated_at": iso, "window_days": 7,
+                      "window_start": "YYYY-MM-DD", "window_end": "YYYY-MM-DD",
                       "days": [{"date": "YYYY-MM-DD", "repos": {name: {added, deleted, net}}}]}
   stats/weekly.json  flat 7-day totals, same shape as before
                      {"generated_at": iso, <repo>: {added, deleted, net}}   (legacy/consumers)
 
-One pass over the window: commits are fetched once per repo for [start, now) and
-flagged into per-day buckets by their committer date, so a daily run costs the
-same number of API calls as the old weekly run.
+The window is the last N COMPLETE UTC days (yesterday back to N-1 days ago), so
+the newest point is never a partial day. One pass covers it: commits are fetched
+once per repo and flagged into per-day buckets by committer date, so a daily run
+costs the same number of API calls as the old weekly run.
 
 Requires GH_TOKEN (fine-grained PAT with read access to repositories).
 """
@@ -63,19 +65,25 @@ def fetch_commits(repo, since, until, max_commits):
     return commits[:max_commits]
 
 
-def compute_window(repos, start_day, until, max_commits):
-    """Return (per_day, totals) for [start_day 00:00 UTC, until).
+def compute_window(repos, start_day, end_day, max_commits):
+    """Return (per_day, totals) for the whole UTC days [start_day, end_day].
+
+    Both bounds are inclusive and complete: `until` is end_day + 1 at 00:00 UTC,
+    so today's partial day is never counted.
 
     per_day: {"YYYY-MM-DD": {repo: {added, deleted, net}}} for every day in the
     window, including quiet days (so the chart has no gaps).
     totals:  {repo: {added, deleted, net}} across the whole window.
     """
-    n_days = (until.date() - start_day).days + 1
+    n_days = (end_day - start_day).days + 1
     per_day = {
         (start_day + dt.timedelta(days=i)).isoformat(): {} for i in range(n_days)
     }
     totals = {}
     since = dt.datetime.combine(start_day, dt.time.min, tzinfo=dt.timezone.utc)
+    until = dt.datetime.combine(
+        end_day + dt.timedelta(days=1), dt.time.min, tzinfo=dt.timezone.utc
+    )
     since_iso = since.isoformat()
     until_iso = until.isoformat()
 
@@ -136,9 +144,12 @@ def main():
     repos = [r for r in repos if not r["fork"] and not r["archived"]]
 
     now = dt.datetime.now(dt.timezone.utc)
-    start_day = (now - dt.timedelta(days=args.days - 1)).date()
+    # Last `days` complete UTC days: yesterday is the newest full day, so the
+    # right-hand point is never a partial day.
+    end_day = (now - dt.timedelta(days=1)).date()
+    start_day = end_day - dt.timedelta(days=args.days - 1)
 
-    per_day, totals = compute_window(repos, start_day, now, args.max_commits)
+    per_day, totals = compute_window(repos, start_day, end_day, args.max_commits)
     days = [
         {"date": day, "repos": per_day[day]} for day in sorted(per_day)
     ]
@@ -149,6 +160,8 @@ def main():
             {
                 "generated_at": now.isoformat(),
                 "window_days": args.days,
+                "window_start": start_day.isoformat(),
+                "window_end": end_day.isoformat(),
                 "days": days,
             },
             f,

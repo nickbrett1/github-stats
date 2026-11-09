@@ -27,7 +27,7 @@
 <body>
   <h1>GitHub — lines of code</h1>
   <div class="meta" id="meta"></div>
-  <div class="trend-title">Net lines per day — all repos · rolling 7 days</div>
+  <div class="trend-title">Net lines per day — all repos · 7 complete days</div>
   <div id="trend">Loading…</div>
   <div id="content"></div>
 <script>
@@ -103,12 +103,10 @@ function renderTrendLine() {
     + " L" + x(0).toFixed(1) + "," + zeroY.toFixed(1) + " Z";
   let circles = "";
   let labels = "";
-  const today = new Date().toISOString().slice(0, 10);
   series.forEach((s, i) => {
     const cx = x(i).toFixed(1), cy = y(s.net).toFixed(1);
     const c = s.net > 0 ? "#4ade80" : s.net < 0 ? "#f87171" : "#94a3b8";
-    const partial = s.date === today ? " (today, partial)" : "";
-    const tip = shortDay(s.date) + ": " + (s.net >= 0 ? "+" : "") + s.net + " net lines" + partial;
+    const tip = shortDay(s.date) + ": " + (s.net >= 0 ? "+" : "") + s.net + " net lines";
     circles += '<circle cx="' + cx + '" cy="' + cy + '" r="2.6" fill="' + c + '">'
       + "<title>" + tip + "</title></circle>";
     labels += '<text x="' + cx + '" y="' + (H - 5) + '" font-size="8" text-anchor="middle" fill="currentColor" opacity=".7">'
@@ -145,8 +143,11 @@ function paint(rows, generatedAt) {
     + cell(totalNet, netCls(totalNet)) + "</tr></tbody></table>";
   document.getElementById("content").innerHTML =
     rows.length ? html : '<div class="empty">No line changes in the last 7 days</div>';
+  const d = days();
+  const range = d.length ? shortDay(d[0].date) + " – " + shortDay(d[d.length - 1].date) : "";
+  const label = range ? "7 complete days · " + range : "Rolling last 7 days";
   document.getElementById("meta").textContent =
-    "Rolling last 7 days · Updated " + gen(generatedAt) + " — refreshed daily by GitHub Actions";
+    label + " · Updated " + gen(generatedAt) + " — refreshed daily by GitHub Actions";
 }
 
 function gen(iso) {
