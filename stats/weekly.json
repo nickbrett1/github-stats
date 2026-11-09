@@ -1,18 +1,13 @@
 {
   "circleci-stats": {
-    "added": 62,
-    "deleted": 62,
+    "added": 60,
+    "deleted": 60,
     "net": 0
   },
   "dagu-dags": {
     "added": 387,
     "deleted": 227,
     "net": 160
-  },
-  "data-scout": {
-    "added": 331,
-    "deleted": 57,
-    "net": 274
   },
   "dbt-duckdb": {
     "added": 1,
@@ -44,16 +39,16 @@
     "deleted": 79,
     "net": 51
   },
-  "generated_at": "2026-11-08T23:31:08.940800+00:00",
+  "generated_at": "2026-11-09T01:21:18.269064+00:00",
   "genproj": {
     "added": 1050,
     "deleted": 157,
     "net": 893
   },
   "github-stats": {
-    "added": 90,
-    "deleted": 90,
-    "net": 0
+    "added": 482,
+    "deleted": 334,
+    "net": 148
   },
   "stratechery-archive": {
     "added": 7751,
