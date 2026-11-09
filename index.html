@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GitHub Lines of Code — Weekly Diff Stats</title>
+<title>GitHub Lines of Code — Rolling 7 Days</title>
 <style>
   :root { color-scheme: light dark; }
   html, body { background: #0f172a; }
@@ -21,48 +21,71 @@
   .pos { color: #4ade80; } .neg { color: #f87171; } .zero { color: inherit; }
   @media (prefers-color-scheme: light) { .pos { color: #16a34a; } .neg { color: #dc2626; } }
   .error { color: #f87171; padding: 8px; }
+  .empty { opacity: .6; padding: 6px 0; }
 </style>
 </head>
 <body>
   <h1>GitHub — lines of code</h1>
   <div class="meta" id="meta"></div>
-  <div class="trend-title">Net lines per week — all repos</div>
+  <div class="trend-title">Net lines per day — all repos · rolling 7 days</div>
   <div id="trend">Loading…</div>
   <div id="content"></div>
 <script>
-const WEEKLY = "./stats/weekly.json";
-const HISTORY = "./stats/history.json";
-let weeklyData = null;
-let historyData = null;
+const DAILY = "./stats/daily.json";
+const WEEKLY = "./stats/weekly.json"; // fallback while daily.json is not published yet
+
+let dailyData = null;
 
 async function load() {
   try {
-    const [wr, hr] = await Promise.all([
-      fetch(WEEKLY, { cache: "no-store" }),
-      fetch(HISTORY, { cache: "no-store" }),
-    ]);
-    if (!wr.ok) throw new Error("stats HTTP " + wr.status);
-    weeklyData = await wr.json();
-    historyData = hr.ok ? await hr.json() : { weeks: [] };
-    renderTrendLine();
-    renderTable();
+    dailyData = await tryFetch(DAILY);
+    if (dailyData) {
+      renderTrendLine();
+      renderTable();
+      return;
+    }
+    // Older deployment: only the flat 7-day snapshot exists. Show it rather
+    // than an error, but make it clear the per-day series is missing.
+    const weekly = await tryFetch(WEEKLY);
+    if (!weekly) throw new Error("no stats published yet");
+    renderNoTrend();
+    renderTableFromWeekly(weekly);
   } catch (e) {
-    document.getElementById("content").innerHTML = '<div class="error">Failed to load stats: ' + e.message + "</div>";
+    document.getElementById("content").innerHTML =
+      '<div class="error">Failed to load stats: ' + e.message + "</div>";
   }
 }
 
+async function tryFetch(path) {
+  const r = await fetch(path, { cache: "no-store" });
+  if (!r.ok) return null;
+  return r.json().catch(() => null);
+}
+
+function days() {
+  return (dailyData && Array.isArray(dailyData.days)) ? dailyData.days : [];
+}
+
+function dayNet(day) {
+  let net = 0;
+  for (const s of Object.values(day.repos || {})) net += s.net || 0;
+  return net;
+}
+
+function renderNoTrend() {
+  document.getElementById("trend").innerHTML =
+    '<div class="meta">Per-day series not published yet — run the stats workflow</div>';
+}
+
+function shortDay(iso) {
+  const d = new Date(iso + "T00:00:00Z");
+  return d.toLocaleDateString(undefined, { month: "short", day: "numeric", timeZone: "UTC" });
+}
+
 function renderTrendLine() {
-  const weeks = historyData.weeks || [];
-  const series = weeks.map((w) => {
-    let net = 0;
-    for (const [repo, s] of Object.entries(w.repos || {})) {
-      if (repo === "week") continue;
-      net += s.net || 0;
-    }
-    return { week: w.week, net };
-  });
+  const series = days().map((d) => ({ date: d.date, net: dayNet(d) }));
   if (series.length < 2) {
-    document.getElementById("trend").innerHTML = '<div class="meta">Not enough weekly data yet</div>';
+    document.getElementById("trend").innerHTML = '<div class="meta">Not enough daily data yet</div>';
     return;
   }
   const W = 320, H = 84, padL = 6, padR = 6, padT = 8, padB = 18;
@@ -70,23 +93,26 @@ function renderTrendLine() {
   const minV = Math.min(0, ...series.map((s) => s.net));
   const range = Math.max(maxV - minV, 1);
   const plotW = W - padL - padR, plotH = H - padT - padB;
-  const x = (i) => padL + (series.length === 1 ? plotW / 2 : (i * plotW) / (series.length - 1));
+  const x = (i) => padL + (i * plotW) / (series.length - 1);
   const y = (v) => padT + ((maxV - v) / range) * plotH;
   const zeroY = y(0);
   const pts = series.map((s, i) => x(i).toFixed(1) + "," + y(s.net).toFixed(1));
   let area = "M" + pts[0];
   for (let i = 1; i < pts.length; i++) area += " L" + pts[i];
-  area += " L" + x(series.length - 1).toFixed(1) + "," + zeroY.toFixed(1) + " L" + x(0).toFixed(1) + "," + zeroY.toFixed(1) + " Z";
+  area += " L" + x(series.length - 1).toFixed(1) + "," + zeroY.toFixed(1)
+    + " L" + x(0).toFixed(1) + "," + zeroY.toFixed(1) + " Z";
   let circles = "";
   let labels = "";
+  const today = new Date().toISOString().slice(0, 10);
   series.forEach((s, i) => {
     const cx = x(i).toFixed(1), cy = y(s.net).toFixed(1);
     const c = s.net > 0 ? "#4ade80" : s.net < 0 ? "#f87171" : "#94a3b8";
-    circles += '<circle cx="' + cx + '" cy="' + cy + '" r="2.4" fill="' + c + '">'
-      + "<title>" + s.week + ": " + (s.net >= 0 ? "+" : "") + s.net + " net lines</title></circle>";
-    if (i === 0 || i === series.length - 1 || i % 2 === 1) {
-      labels += '<text x="' + cx + '" y="' + (H - 5) + '" font-size="8" text-anchor="middle" fill="currentColor" opacity=".7">' + s.week.slice(5) + "</text>";
-    }
+    const partial = s.date === today ? " (today, partial)" : "";
+    const tip = shortDay(s.date) + ": " + (s.net >= 0 ? "+" : "") + s.net + " net lines" + partial;
+    circles += '<circle cx="' + cx + '" cy="' + cy + '" r="2.6" fill="' + c + '">'
+      + "<title>" + tip + "</title></circle>";
+    labels += '<text x="' + cx + '" y="' + (H - 5) + '" font-size="8" text-anchor="middle" fill="currentColor" opacity=".7">'
+      + shortDay(s.date) + "</text>";
   });
   const svg = '<svg viewBox="0 0 ' + W + " " + H + '" style="width:100%;max-width:420px" preserveAspectRatio="xMidYMid meet">'
     + '<line x1="' + padL + '" y1="' + zeroY.toFixed(1) + '" x2="' + (W - padR) + '" y2="' + zeroY.toFixed(1)
@@ -97,20 +123,15 @@ function renderTrendLine() {
   document.getElementById("trend").innerHTML = svg;
 }
 
-function renderTable() {
-  const data = weeklyData;
-  const rows = [];
+function netCls(v) { return v > 0 ? "pos" : v < 0 ? "neg" : "zero"; }
+function cell(v, c) { return '<td class="' + c + '">' + v.toLocaleString() + "</td>"; }
+
+function paint(rows, generatedAt) {
   let totalAdded = 0, totalDeleted = 0, totalNet = 0;
-  for (const [repo, s] of Object.entries(data)) {
-    if (repo === "generated_at") continue;
-    const a = s.added || 0, d = s.deleted || 0, n = s.net || 0;
-    if (a === 0 && d === 0) continue;
-    totalAdded += a; totalDeleted += d; totalNet += n;
-    rows.push({ repo, a, d, n });
+  for (const r of rows) {
+    totalAdded += r.a; totalDeleted += r.d; totalNet += r.n;
   }
   rows.sort((x, y) => y.n - x.n);
-  const netCls = (v) => (v > 0 ? "pos" : v < 0 ? "neg" : "zero");
-  const cell = (v, c) => '<td class="' + c + '">' + v.toLocaleString() + "</td>";
   let html = '<table><thead><tr><th>Repository</th><th>Added</th><th>Removed</th><th>Net</th></tr></thead><tbody>';
   for (const r of rows) {
     html += "<tr><td>" + r.repo + "</td>"
@@ -122,15 +143,42 @@ function renderTable() {
     + cell(totalAdded, totalAdded > 0 ? "pos" : "zero")
     + cell(totalDeleted, totalDeleted > 0 ? "neg" : "zero")
     + cell(totalNet, netCls(totalNet)) + "</tr></tbody></table>";
-  document.getElementById("content").innerHTML = html;
-  const gen = (iso) => {
-    if (!iso) return "unknown";
-    const d = new Date(iso);
-    const day = d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
-    const time = d.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
-    return day + " " + time;
-  };
-  document.getElementById("meta").textContent = "Last 7 days · Updated " + gen(data.generated_at) + " — regenerated weekly by GitHub Actions";
+  document.getElementById("content").innerHTML =
+    rows.length ? html : '<div class="empty">No line changes in the last 7 days</div>';
+  document.getElementById("meta").textContent =
+    "Rolling last 7 days · Updated " + gen(generatedAt) + " — refreshed daily by GitHub Actions";
+}
+
+function gen(iso) {
+  if (!iso) return "unknown";
+  const d = new Date(iso);
+  const day = d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  const time = d.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
+  return day + " " + time;
+}
+
+function renderTable() {
+  const totals = {};
+  for (const d of days()) {
+    for (const [repo, s] of Object.entries(d.repos || {})) {
+      const t = totals[repo] || (totals[repo] = { repo, a: 0, d: 0, n: 0 });
+      t.a += s.added || 0;
+      t.d += s.deleted || 0;
+      t.n += s.net || 0;
+    }
+  }
+  paint(Object.values(totals).filter((r) => r.a || r.d), dailyData.generated_at);
+}
+
+function renderTableFromWeekly(data) {
+  const rows = [];
+  for (const [repo, s] of Object.entries(data)) {
+    if (repo === "generated_at") continue;
+    const a = s.added || 0, d = s.deleted || 0;
+    if (!a && !d) continue;
+    rows.push({ repo, a, d, n: s.net || 0 });
+  }
+  paint(rows, data.generated_at);
 }
 
 load();
