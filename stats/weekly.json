@@ -9,11 +9,6 @@
     "deleted": 227,
     "net": 160
   },
-  "data-scout": {
-    "added": 331,
-    "deleted": 57,
-    "net": 274
-  },
   "dbt-duckdb": {
     "added": 1,
     "deleted": 1,
@@ -44,16 +39,16 @@
     "deleted": 79,
     "net": 51
   },
-  "generated_at": "2026-11-09T16:24:32.742028+00:00",
+  "generated_at": "2026-11-10T14:55:32.168569+00:00",
   "genproj": {
     "added": 1050,
     "deleted": 157,
     "net": 893
   },
   "github-stats": {
-    "added": 90,
-    "deleted": 90,
-    "net": 0
+    "added": 584,
+    "deleted": 413,
+    "net": 171
   },
   "stratechery-archive": {
     "added": 7751,
