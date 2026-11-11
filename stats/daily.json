@@ -1,36 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-03",
-      "repos": {
-        "circleci-stats": {
-          "added": 9,
-          "deleted": 9,
-          "net": 0
-        },
-        "dagu-dags": {
-          "added": 1,
-          "deleted": 1,
-          "net": 0
-        },
-        "dbt-duckdb": {
-          "added": 1,
-          "deleted": 1,
-          "net": 0
-        },
-        "game-catalog": {
-          "added": 130,
-          "deleted": 79,
-          "net": 51
-        },
-        "um790-backup": {
-          "added": 3,
-          "deleted": 3,
-          "net": 0
-        }
-      }
-    },
-    {
       "date": "2026-11-04",
       "repos": {
         "circleci-stats": {
@@ -169,10 +139,40 @@
           "net": 171
         }
       }
+    },
+    {
+      "date": "2026-11-10",
+      "repos": {
+        "circleci-stats": {
+          "added": 28,
+          "deleted": 12,
+          "net": 16
+        },
+        "dagu-dags": {
+          "added": 520,
+          "deleted": 162,
+          "net": 358
+        },
+        "dbt-duckdb": {
+          "added": 1,
+          "deleted": 1,
+          "net": 0
+        },
+        "github-stats": {
+          "added": 22,
+          "deleted": 32,
+          "net": -10
+        },
+        "stratechery-search": {
+          "added": 196,
+          "deleted": 96,
+          "net": 100
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-10T14:55:32.168569+00:00",
+  "generated_at": "2026-11-11T14:26:04.728432+00:00",
   "window_days": 7,
-  "window_end": "2026-11-09",
-  "window_start": "2026-11-03"
+  "window_end": "2026-11-10",
+  "window_start": "2026-11-04"
 }
