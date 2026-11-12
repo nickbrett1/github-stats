@@ -5,9 +5,9 @@
     "net": 16
   },
   "dagu-dags": {
-    "added": 906,
-    "deleted": 388,
-    "net": 518
+    "added": 546,
+    "deleted": 164,
+    "net": 382
   },
   "dbt-duckdb": {
     "added": 1,
@@ -34,21 +34,21 @@
     "deleted": 9,
     "net": 77
   },
-  "generated_at": "2026-11-11T14:26:04.728432+00:00",
+  "generated_at": "2026-11-12T15:18:11.618896+00:00",
   "genproj": {
-    "added": 1050,
-    "deleted": 157,
-    "net": 893
+    "added": 136,
+    "deleted": 121,
+    "net": 15
   },
   "github-stats": {
-    "added": 606,
-    "deleted": 445,
-    "net": 161
+    "added": 654,
+    "deleted": 498,
+    "net": 156
   },
-  "stratechery-archive": {
-    "added": 7751,
-    "deleted": 223,
-    "net": 7528
+  "notes-mcp": {
+    "added": 142,
+    "deleted": 48,
+    "net": 94
   },
   "stratechery-search": {
     "added": 28449,

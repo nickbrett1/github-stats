@@ -1,31 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-04",
-      "repos": {
-        "circleci-stats": {
-          "added": 9,
-          "deleted": 9,
-          "net": 0
-        },
-        "dagu-dags": {
-          "added": 360,
-          "deleted": 224,
-          "net": 136
-        },
-        "genproj": {
-          "added": 914,
-          "deleted": 36,
-          "net": 878
-        },
-        "stratechery-archive": {
-          "added": 7751,
-          "deleted": 223,
-          "net": 7528
-        }
-      }
-    },
-    {
       "date": "2026-11-05",
       "repos": {
         "circleci-stats": {
@@ -169,10 +144,30 @@
           "net": 100
         }
       }
+    },
+    {
+      "date": "2026-11-11",
+      "repos": {
+        "circleci-stats": {
+          "added": 9,
+          "deleted": 9,
+          "net": 0
+        },
+        "github-stats": {
+          "added": 48,
+          "deleted": 53,
+          "net": -5
+        },
+        "notes-mcp": {
+          "added": 142,
+          "deleted": 48,
+          "net": 94
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-11T14:26:04.728432+00:00",
+  "generated_at": "2026-11-12T15:18:11.618896+00:00",
   "window_days": 7,
-  "window_end": "2026-11-10",
-  "window_start": "2026-11-04"
+  "window_end": "2026-11-11",
+  "window_start": "2026-11-05"
 }
