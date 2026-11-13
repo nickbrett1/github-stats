@@ -5,9 +5,14 @@
     "net": 16
   },
   "dagu-dags": {
-    "added": 546,
-    "deleted": 164,
-    "net": 382
+    "added": 520,
+    "deleted": 162,
+    "net": 358
+  },
+  "data-download": {
+    "added": 8206,
+    "deleted": 306,
+    "net": 7900
   },
   "dbt-duckdb": {
     "added": 1,
@@ -25,25 +30,25 @@
     "net": 0
   },
   "galactic-unicorn": {
-    "added": 98,
-    "deleted": 6,
-    "net": 92
+    "added": 216,
+    "deleted": 26,
+    "net": 190
   },
   "galactic-unicorn-remote": {
-    "added": 86,
-    "deleted": 9,
-    "net": 77
+    "added": 92,
+    "deleted": 27,
+    "net": 65
   },
-  "generated_at": "2026-11-12T15:18:11.618896+00:00",
+  "generated_at": "2026-11-13T14:37:53.260595+00:00",
   "genproj": {
     "added": 136,
     "deleted": 121,
     "net": 15
   },
   "github-stats": {
-    "added": 654,
-    "deleted": 498,
-    "net": 156
+    "added": 692,
+    "deleted": 541,
+    "net": 151
   },
   "notes-mcp": {
     "added": 142,
@@ -51,13 +56,8 @@
     "net": 94
   },
   "stratechery-search": {
-    "added": 28449,
-    "deleted": 2523,
-    "net": 25926
-  },
-  "um790-backup": {
-    "added": 24,
-    "deleted": 0,
-    "net": 24
+    "added": 13528,
+    "deleted": 1795,
+    "net": 11733
   }
 }

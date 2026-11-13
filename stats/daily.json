@@ -1,46 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-05",
-      "repos": {
-        "circleci-stats": {
-          "added": 8,
-          "deleted": 8,
-          "net": 0
-        },
-        "dagu-dags": {
-          "added": 26,
-          "deleted": 2,
-          "net": 24
-        },
-        "devdash": {
-          "added": 1,
-          "deleted": 1,
-          "net": 0
-        },
-        "galactic-unicorn": {
-          "added": 98,
-          "deleted": 6,
-          "net": 92
-        },
-        "galactic-unicorn-remote": {
-          "added": 86,
-          "deleted": 9,
-          "net": 77
-        },
-        "stratechery-search": {
-          "added": 14921,
-          "deleted": 728,
-          "net": 14193
-        },
-        "um790-backup": {
-          "added": 24,
-          "deleted": 0,
-          "net": 24
-        }
-      }
-    },
-    {
       "date": "2026-11-06",
       "repos": {
         "circleci-stats": {
@@ -164,10 +124,45 @@
           "net": 94
         }
       }
+    },
+    {
+      "date": "2026-11-12",
+      "repos": {
+        "circleci-stats": {
+          "added": 8,
+          "deleted": 8,
+          "net": 0
+        },
+        "data-download": {
+          "added": 8206,
+          "deleted": 306,
+          "net": 7900
+        },
+        "devdash": {
+          "added": 1,
+          "deleted": 1,
+          "net": 0
+        },
+        "galactic-unicorn": {
+          "added": 216,
+          "deleted": 26,
+          "net": 190
+        },
+        "galactic-unicorn-remote": {
+          "added": 92,
+          "deleted": 27,
+          "net": 65
+        },
+        "github-stats": {
+          "added": 38,
+          "deleted": 43,
+          "net": -5
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-12T15:18:11.618896+00:00",
+  "generated_at": "2026-11-13T14:37:53.260595+00:00",
   "window_days": 7,
-  "window_end": "2026-11-11",
-  "window_start": "2026-11-05"
+  "window_end": "2026-11-12",
+  "window_start": "2026-11-06"
 }
