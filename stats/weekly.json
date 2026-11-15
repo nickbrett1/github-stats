@@ -1,18 +1,23 @@
 {
   "circleci-stats": {
-    "added": 81,
-    "deleted": 65,
+    "added": 80,
+    "deleted": 64,
     "net": 16
   },
   "dagu-dags": {
-    "added": 520,
-    "deleted": 162,
-    "net": 358
+    "added": 659,
+    "deleted": 200,
+    "net": 459
   },
   "data-download": {
-    "added": 8233,
-    "deleted": 313,
-    "net": 7920
+    "added": 17982,
+    "deleted": 2009,
+    "net": 15973
+  },
+  "data-scout": {
+    "added": 514,
+    "deleted": 162,
+    "net": 352
   },
   "dbt-duckdb": {
     "added": 1,
@@ -20,40 +25,40 @@
     "net": 0
   },
   "deepseek-balance": {
-    "added": 851,
-    "deleted": 46,
-    "net": 805
+    "added": 7484,
+    "deleted": 1100,
+    "net": 6384
   },
   "devdash": {
-    "added": 1,
-    "deleted": 1,
-    "net": 0
+    "added": 1681,
+    "deleted": 633,
+    "net": 1048
   },
   "ftn": {
-    "added": 7,
-    "deleted": 7,
+    "added": 17,
+    "deleted": 17,
     "net": 0
   },
   "galactic-unicorn": {
-    "added": 216,
-    "deleted": 26,
-    "net": 190
+    "added": 306,
+    "deleted": 38,
+    "net": 268
   },
   "galactic-unicorn-remote": {
     "added": 92,
     "deleted": 27,
     "net": 65
   },
-  "generated_at": "2026-11-14T13:34:13.875375+00:00",
+  "generated_at": "2026-11-15T13:57:46.612344+00:00",
   "genproj": {
-    "added": 136,
-    "deleted": 121,
-    "net": 15
+    "added": 3379,
+    "deleted": 641,
+    "net": 2738
   },
   "github-stats": {
-    "added": 751,
-    "deleted": 605,
-    "net": 146
+    "added": 799,
+    "deleted": 633,
+    "net": 166
   },
   "notes-mcp": {
     "added": 142,
@@ -61,8 +66,18 @@
     "net": 94
   },
   "stratechery-search": {
-    "added": 10740,
-    "deleted": 1029,
-    "net": 9711
+    "added": 8042,
+    "deleted": 1658,
+    "net": 6384
+  },
+  "ui-registry": {
+    "added": 51202,
+    "deleted": 1483,
+    "net": 49719
+  },
+  "ui-shadcn-smoke": {
+    "added": 4749,
+    "deleted": 155,
+    "net": 4594
   }
 }

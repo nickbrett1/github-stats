@@ -1,26 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-07",
-      "repos": {
-        "circleci-stats": {
-          "added": 10,
-          "deleted": 10,
-          "net": 0
-        },
-        "deepseek-balance": {
-          "added": 523,
-          "deleted": 38,
-          "net": 485
-        },
-        "stratechery-search": {
-          "added": 6532,
-          "deleted": 659,
-          "net": 5873
-        }
-      }
-    },
-    {
       "date": "2026-11-08",
       "repos": {
         "circleci-stats": {
@@ -174,10 +154,80 @@
           "net": 293
         }
       }
+    },
+    {
+      "date": "2026-11-14",
+      "repos": {
+        "circleci-stats": {
+          "added": 9,
+          "deleted": 9,
+          "net": 0
+        },
+        "dagu-dags": {
+          "added": 139,
+          "deleted": 38,
+          "net": 101
+        },
+        "data-download": {
+          "added": 9749,
+          "deleted": 1696,
+          "net": 8053
+        },
+        "data-scout": {
+          "added": 514,
+          "deleted": 162,
+          "net": 352
+        },
+        "deepseek-balance": {
+          "added": 7156,
+          "deleted": 1092,
+          "net": 6064
+        },
+        "devdash": {
+          "added": 1680,
+          "deleted": 632,
+          "net": 1048
+        },
+        "ftn": {
+          "added": 10,
+          "deleted": 10,
+          "net": 0
+        },
+        "galactic-unicorn": {
+          "added": 90,
+          "deleted": 12,
+          "net": 78
+        },
+        "genproj": {
+          "added": 3243,
+          "deleted": 520,
+          "net": 2723
+        },
+        "github-stats": {
+          "added": 48,
+          "deleted": 28,
+          "net": 20
+        },
+        "stratechery-search": {
+          "added": 3834,
+          "deleted": 1288,
+          "net": 2546
+        },
+        "ui-registry": {
+          "added": 51202,
+          "deleted": 1483,
+          "net": 49719
+        },
+        "ui-shadcn-smoke": {
+          "added": 4749,
+          "deleted": 155,
+          "net": 4594
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-14T13:34:13.875375+00:00",
+  "generated_at": "2026-11-15T13:57:46.612344+00:00",
   "window_days": 7,
-  "window_end": "2026-11-13",
-  "window_start": "2026-11-07"
+  "window_end": "2026-11-14",
+  "window_start": "2026-11-08"
 }
