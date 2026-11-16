@@ -10,14 +10,14 @@
     "net": 459
   },
   "data-download": {
-    "added": 17982,
-    "deleted": 2009,
-    "net": 15973
+    "added": 25836,
+    "deleted": 2939,
+    "net": 22897
   },
   "data-scout": {
-    "added": 514,
-    "deleted": 162,
-    "net": 352
+    "added": 552,
+    "deleted": 178,
+    "net": 374
   },
   "dbt-duckdb": {
     "added": 1,
@@ -25,14 +25,14 @@
     "net": 0
   },
   "deepseek-balance": {
-    "added": 7484,
-    "deleted": 1100,
-    "net": 6384
+    "added": 7223,
+    "deleted": 1112,
+    "net": 6111
   },
   "devdash": {
-    "added": 1681,
-    "deleted": 633,
-    "net": 1048
+    "added": 1702,
+    "deleted": 638,
+    "net": 1064
   },
   "ftn": {
     "added": 17,
@@ -49,31 +49,31 @@
     "deleted": 27,
     "net": 65
   },
-  "generated_at": "2026-11-15T13:57:46.612344+00:00",
+  "generated_at": "2026-11-16T15:50:31.843915+00:00",
   "genproj": {
-    "added": 3379,
-    "deleted": 641,
-    "net": 2738
+    "added": 3293,
+    "deleted": 562,
+    "net": 2731
   },
   "github-stats": {
-    "added": 799,
-    "deleted": 633,
-    "net": 166
+    "added": 916,
+    "deleted": 685,
+    "net": 231
   },
   "notes-mcp": {
-    "added": 142,
-    "deleted": 48,
+    "added": 143,
+    "deleted": 49,
     "net": 94
   },
   "stratechery-search": {
-    "added": 8042,
-    "deleted": 1658,
-    "net": 6384
+    "added": 4418,
+    "deleted": 1430,
+    "net": 2988
   },
   "ui-registry": {
-    "added": 51202,
-    "deleted": 1483,
-    "net": 49719
+    "added": 60496,
+    "deleted": 8219,
+    "net": 52277
   },
   "ui-shadcn-smoke": {
     "added": 4749,
