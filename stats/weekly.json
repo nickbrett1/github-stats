@@ -20,19 +20,19 @@
     "net": 13
   },
   "circleci-stats": {
-    "added": 80,
-    "deleted": 64,
-    "net": 16
+    "added": 60,
+    "deleted": 60,
+    "net": 0
   },
   "dagu-dags": {
-    "added": 699,
-    "deleted": 205,
-    "net": 494
+    "added": 179,
+    "deleted": 43,
+    "net": 136
   },
   "data-download": {
-    "added": 26683,
-    "deleted": 2993,
-    "net": 23690
+    "added": 26777,
+    "deleted": 3012,
+    "net": 23765
   },
   "data-scout": {
     "added": 566,
@@ -50,8 +50,8 @@
     "net": 13
   },
   "dbt-duckdb": {
-    "added": 1,
-    "deleted": 1,
+    "added": 2,
+    "deleted": 2,
     "net": 0
   },
   "deepseek-balance": {
@@ -80,14 +80,14 @@
     "net": 13
   },
   "galactic-unicorn": {
-    "added": 320,
-    "deleted": 39,
-    "net": 281
+    "added": 372,
+    "deleted": 52,
+    "net": 320
   },
   "galactic-unicorn-remote": {
-    "added": 2423,
-    "deleted": 874,
-    "net": 1549
+    "added": 2499,
+    "deleted": 907,
+    "net": 1592
   },
   "gallery": {
     "added": 14,
@@ -99,16 +99,16 @@
     "deleted": 41,
     "net": 1753
   },
-  "generated_at": "2026-11-17T16:02:38.009045+00:00",
+  "generated_at": "2026-11-18T15:42:55.039462+00:00",
   "genproj": {
-    "added": 3307,
-    "deleted": 563,
-    "net": 2744
+    "added": 3619,
+    "deleted": 565,
+    "net": 3054
   },
   "github-stats": {
-    "added": 417,
-    "deleted": 327,
-    "net": 90
+    "added": 703,
+    "deleted": 353,
+    "net": 350
   },
   "nas-port-mcp": {
     "added": 14,
@@ -156,9 +156,14 @@
     "net": 13
   },
   "stratechery-search": {
-    "added": 4432,
-    "deleted": 1431,
-    "net": 3001
+    "added": 4236,
+    "deleted": 1335,
+    "net": 2901
+  },
+  "stripe-toddler": {
+    "added": 23,
+    "deleted": 30,
+    "net": -7
   },
   "ui-registry": {
     "added": 65648,

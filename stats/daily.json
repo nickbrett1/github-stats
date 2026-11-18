@@ -1,36 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-10",
-      "repos": {
-        "circleci-stats": {
-          "added": 28,
-          "deleted": 12,
-          "net": 16
-        },
-        "dagu-dags": {
-          "added": 520,
-          "deleted": 162,
-          "net": 358
-        },
-        "dbt-duckdb": {
-          "added": 1,
-          "deleted": 1,
-          "net": 0
-        },
-        "github-stats": {
-          "added": 22,
-          "deleted": 32,
-          "net": -10
-        },
-        "stratechery-search": {
-          "added": 196,
-          "deleted": 96,
-          "net": 100
-        }
-      }
-    },
-    {
       "date": "2026-11-11",
       "repos": {
         "circleci-stats": {
@@ -409,10 +379,55 @@
           "net": 13
         }
       }
+    },
+    {
+      "date": "2026-11-17",
+      "repos": {
+        "circleci-stats": {
+          "added": 8,
+          "deleted": 8,
+          "net": 0
+        },
+        "data-download": {
+          "added": 94,
+          "deleted": 19,
+          "net": 75
+        },
+        "dbt-duckdb": {
+          "added": 2,
+          "deleted": 2,
+          "net": 0
+        },
+        "galactic-unicorn": {
+          "added": 52,
+          "deleted": 13,
+          "net": 39
+        },
+        "galactic-unicorn-remote": {
+          "added": 76,
+          "deleted": 33,
+          "net": 43
+        },
+        "genproj": {
+          "added": 312,
+          "deleted": 2,
+          "net": 310
+        },
+        "github-stats": {
+          "added": 308,
+          "deleted": 58,
+          "net": 250
+        },
+        "stripe-toddler": {
+          "added": 23,
+          "deleted": 30,
+          "net": -7
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-17T16:02:38.009045+00:00",
+  "generated_at": "2026-11-18T15:42:55.039462+00:00",
   "window_days": 7,
-  "window_end": "2026-11-16",
-  "window_start": "2026-11-10"
+  "window_end": "2026-11-17",
+  "window_start": "2026-11-11"
 }
