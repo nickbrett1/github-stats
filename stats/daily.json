@@ -1,26 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-11",
-      "repos": {
-        "circleci-stats": {
-          "added": 9,
-          "deleted": 9,
-          "net": 0
-        },
-        "github-stats": {
-          "added": 48,
-          "deleted": 53,
-          "net": -5
-        },
-        "notes-mcp": {
-          "added": 142,
-          "deleted": 48,
-          "net": 94
-        }
-      }
-    },
-    {
       "date": "2026-11-12",
       "repos": {
         "circleci-stats": {
@@ -424,10 +404,30 @@
           "net": -7
         }
       }
+    },
+    {
+      "date": "2026-11-18",
+      "repos": {
+        "circleci-stats": {
+          "added": 8,
+          "deleted": 8,
+          "net": 0
+        },
+        "data-download": {
+          "added": 1261,
+          "deleted": 510,
+          "net": 751
+        },
+        "github-stats": {
+          "added": 80,
+          "deleted": 60,
+          "net": 20
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-18T15:42:55.039462+00:00",
+  "generated_at": "2026-11-19T15:47:33.523347+00:00",
   "window_days": 7,
-  "window_end": "2026-11-17",
-  "window_start": "2026-11-11"
+  "window_end": "2026-11-18",
+  "window_start": "2026-11-12"
 }
