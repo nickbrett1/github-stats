@@ -20,8 +20,8 @@
     "net": 13
   },
   "circleci-stats": {
-    "added": 59,
-    "deleted": 59,
+    "added": 60,
+    "deleted": 60,
     "net": 0
   },
   "dagu-dags": {
@@ -30,9 +30,9 @@
     "net": 136
   },
   "data-download": {
-    "added": 28038,
-    "deleted": 3522,
-    "net": 24516
+    "added": 31863,
+    "deleted": 3276,
+    "net": 28587
   },
   "data-scout": {
     "added": 566,
@@ -80,14 +80,14 @@
     "net": 13
   },
   "galactic-unicorn": {
-    "added": 372,
-    "deleted": 52,
-    "net": 320
+    "added": 156,
+    "deleted": 26,
+    "net": 130
   },
   "galactic-unicorn-remote": {
-    "added": 2499,
-    "deleted": 907,
-    "net": 1592
+    "added": 2407,
+    "deleted": 880,
+    "net": 1527
   },
   "gallery": {
     "added": 14,
@@ -99,16 +99,16 @@
     "deleted": 41,
     "net": 1753
   },
-  "generated_at": "2026-11-19T15:47:33.523347+00:00",
+  "generated_at": "2026-11-20T15:29:10.532175+00:00",
   "genproj": {
     "added": 3619,
     "deleted": 565,
     "net": 3054
   },
   "github-stats": {
-    "added": 735,
-    "deleted": 360,
-    "net": 375
+    "added": 732,
+    "deleted": 352,
+    "net": 380
   },
   "nas-port-mcp": {
     "added": 14,

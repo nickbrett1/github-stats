@@ -1,41 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-12",
-      "repos": {
-        "circleci-stats": {
-          "added": 8,
-          "deleted": 8,
-          "net": 0
-        },
-        "data-download": {
-          "added": 8206,
-          "deleted": 306,
-          "net": 7900
-        },
-        "devdash": {
-          "added": 1,
-          "deleted": 1,
-          "net": 0
-        },
-        "galactic-unicorn": {
-          "added": 216,
-          "deleted": 26,
-          "net": 190
-        },
-        "galactic-unicorn-remote": {
-          "added": 92,
-          "deleted": 27,
-          "net": 65
-        },
-        "github-stats": {
-          "added": 38,
-          "deleted": 43,
-          "net": -5
-        }
-      }
-    },
-    {
       "date": "2026-11-13",
       "repos": {
         "circleci-stats": {
@@ -424,10 +389,35 @@
           "net": 20
         }
       }
+    },
+    {
+      "date": "2026-11-19",
+      "repos": {
+        "circleci-stats": {
+          "added": 9,
+          "deleted": 9,
+          "net": 0
+        },
+        "data-download": {
+          "added": 12031,
+          "deleted": 60,
+          "net": 11971
+        },
+        "devdash": {
+          "added": 1,
+          "deleted": 1,
+          "net": 0
+        },
+        "github-stats": {
+          "added": 35,
+          "deleted": 35,
+          "net": 0
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-19T15:47:33.523347+00:00",
+  "generated_at": "2026-11-20T15:29:10.532175+00:00",
   "window_days": 7,
-  "window_end": "2026-11-18",
-  "window_start": "2026-11-12"
+  "window_end": "2026-11-19",
+  "window_start": "2026-11-13"
 }
