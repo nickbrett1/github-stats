@@ -1,36 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-13",
-      "repos": {
-        "circleci-stats": {
-          "added": 9,
-          "deleted": 9,
-          "net": 0
-        },
-        "data-download": {
-          "added": 27,
-          "deleted": 7,
-          "net": 20
-        },
-        "ftn": {
-          "added": 7,
-          "deleted": 7,
-          "net": 0
-        },
-        "github-stats": {
-          "added": 59,
-          "deleted": 64,
-          "net": -5
-        },
-        "stratechery-search": {
-          "added": 324,
-          "deleted": 31,
-          "net": 293
-        }
-      }
-    },
-    {
       "date": "2026-11-14",
       "repos": {
         "circleci-stats": {
@@ -414,10 +384,30 @@
           "net": 0
         }
       }
+    },
+    {
+      "date": "2026-11-20",
+      "repos": {
+        "circleci-stats": {
+          "added": 8,
+          "deleted": 8,
+          "net": 0
+        },
+        "data-download": {
+          "added": 3064,
+          "deleted": 329,
+          "net": 2735
+        },
+        "github-stats": {
+          "added": 43,
+          "deleted": 53,
+          "net": -10
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-20T15:29:10.532175+00:00",
+  "generated_at": "2026-11-21T14:42:01.646993+00:00",
   "window_days": 7,
-  "window_end": "2026-11-19",
-  "window_start": "2026-11-13"
+  "window_end": "2026-11-20",
+  "window_start": "2026-11-14"
 }

@@ -20,8 +20,8 @@
     "net": 13
   },
   "circleci-stats": {
-    "added": 60,
-    "deleted": 60,
+    "added": 59,
+    "deleted": 59,
     "net": 0
   },
   "dagu-dags": {
@@ -30,9 +30,9 @@
     "net": 136
   },
   "data-download": {
-    "added": 31863,
-    "deleted": 3276,
-    "net": 28587
+    "added": 34900,
+    "deleted": 3598,
+    "net": 31302
   },
   "data-scout": {
     "added": 566,
@@ -70,8 +70,8 @@
     "net": 305
   },
   "ftn": {
-    "added": 31,
-    "deleted": 18,
+    "added": 24,
+    "deleted": 11,
     "net": 13
   },
   "gaggle": {
@@ -99,16 +99,16 @@
     "deleted": 41,
     "net": 1753
   },
-  "generated_at": "2026-11-20T15:29:10.532175+00:00",
+  "generated_at": "2026-11-21T14:42:01.646993+00:00",
   "genproj": {
     "added": 3619,
     "deleted": 565,
     "net": 3054
   },
   "github-stats": {
-    "added": 732,
-    "deleted": 352,
-    "net": 380
+    "added": 716,
+    "deleted": 341,
+    "net": 375
   },
   "nas-port-mcp": {
     "added": 14,
@@ -156,9 +156,9 @@
     "net": 13
   },
   "stratechery-search": {
-    "added": 4236,
-    "deleted": 1335,
-    "net": 2901
+    "added": 3912,
+    "deleted": 1304,
+    "net": 2608
   },
   "stripe-toddler": {
     "added": 23,
