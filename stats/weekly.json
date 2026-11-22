@@ -25,19 +25,24 @@
     "net": 0
   },
   "dagu-dags": {
-    "added": 179,
-    "deleted": 43,
-    "net": 136
+    "added": 40,
+    "deleted": 5,
+    "net": 35
   },
   "data-download": {
-    "added": 34900,
-    "deleted": 3598,
-    "net": 31302
+    "added": 25151,
+    "deleted": 1902,
+    "net": 23249
+  },
+  "data-download-drivers": {
+    "added": 5273,
+    "deleted": 143,
+    "net": 5130
   },
   "data-scout": {
-    "added": 566,
-    "deleted": 179,
-    "net": 387
+    "added": 52,
+    "deleted": 17,
+    "net": 35
   },
   "data-sourcing-agent": {
     "added": 14,
@@ -55,14 +60,14 @@
     "net": 0
   },
   "deepseek-balance": {
-    "added": 7237,
-    "deleted": 1113,
-    "net": 6124
+    "added": 81,
+    "deleted": 21,
+    "net": 60
   },
   "devdash": {
-    "added": 1954,
-    "deleted": 681,
-    "net": 1273
+    "added": 274,
+    "deleted": 49,
+    "net": 225
   },
   "devopen": {
     "added": 308,
@@ -70,8 +75,8 @@
     "net": 305
   },
   "ftn": {
-    "added": 24,
-    "deleted": 11,
+    "added": 14,
+    "deleted": 1,
     "net": 13
   },
   "gaggle": {
@@ -80,9 +85,9 @@
     "net": 13
   },
   "galactic-unicorn": {
-    "added": 156,
-    "deleted": 26,
-    "net": 130
+    "added": 66,
+    "deleted": 14,
+    "net": 52
   },
   "galactic-unicorn-remote": {
     "added": 2407,
@@ -99,16 +104,16 @@
     "deleted": 41,
     "net": 1753
   },
-  "generated_at": "2026-11-21T14:42:01.646993+00:00",
+  "generated_at": "2026-11-22T14:37:19.580594+00:00",
   "genproj": {
-    "added": 3619,
-    "deleted": 565,
-    "net": 3054
+    "added": 376,
+    "deleted": 45,
+    "net": 331
   },
   "github-stats": {
-    "added": 716,
-    "deleted": 341,
-    "net": 375
+    "added": 705,
+    "deleted": 360,
+    "net": 345
   },
   "nas-port-mcp": {
     "added": 14,
@@ -156,9 +161,9 @@
     "net": 13
   },
   "stratechery-search": {
-    "added": 3912,
-    "deleted": 1304,
-    "net": 2608
+    "added": 78,
+    "deleted": 16,
+    "net": 62
   },
   "stripe-toddler": {
     "added": 23,
@@ -166,14 +171,9 @@
     "net": -7
   },
   "ui-registry": {
-    "added": 65648,
-    "deleted": 8868,
-    "net": 56780
-  },
-  "ui-shadcn-smoke": {
-    "added": 4749,
-    "deleted": 155,
-    "net": 4594
+    "added": 14446,
+    "deleted": 7385,
+    "net": 7061
   },
   "um790-backup": {
     "added": 14,
