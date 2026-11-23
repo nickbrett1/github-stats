@@ -30,23 +30,23 @@
     "net": 35
   },
   "data-download": {
-    "added": 25151,
-    "deleted": 1902,
-    "net": 23249
+    "added": 20972,
+    "deleted": 1353,
+    "net": 19619
   },
   "data-download-drivers": {
-    "added": 5273,
-    "deleted": 143,
-    "net": 5130
+    "added": 7146,
+    "deleted": 190,
+    "net": 6956
   },
   "data-scout": {
-    "added": 52,
-    "deleted": 17,
-    "net": 35
-  },
-  "data-sourcing-agent": {
     "added": 14,
     "deleted": 1,
+    "net": 13
+  },
+  "data-sourcing-agent": {
+    "added": 15,
+    "deleted": 2,
     "net": 13
   },
   "databento-discovery": {
@@ -60,14 +60,14 @@
     "net": 0
   },
   "deepseek-balance": {
-    "added": 81,
-    "deleted": 21,
-    "net": 60
+    "added": 14,
+    "deleted": 1,
+    "net": 13
   },
   "devdash": {
-    "added": 274,
-    "deleted": 49,
-    "net": 225
+    "added": 253,
+    "deleted": 44,
+    "net": 209
   },
   "devopen": {
     "added": 308,
@@ -104,16 +104,16 @@
     "deleted": 41,
     "net": 1753
   },
-  "generated_at": "2026-11-22T14:37:19.580594+00:00",
+  "generated_at": "2026-11-23T18:13:34.000700+00:00",
   "genproj": {
-    "added": 376,
-    "deleted": 45,
-    "net": 331
+    "added": 842,
+    "deleted": 103,
+    "net": 739
   },
   "github-stats": {
-    "added": 705,
-    "deleted": 360,
-    "net": 345
+    "added": 649,
+    "deleted": 419,
+    "net": 230
   },
   "nas-port-mcp": {
     "added": 14,
@@ -161,9 +161,9 @@
     "net": 13
   },
   "stratechery-search": {
-    "added": 78,
-    "deleted": 16,
-    "net": 62
+    "added": 14,
+    "deleted": 1,
+    "net": 13
   },
   "stripe-toddler": {
     "added": 23,
@@ -171,9 +171,9 @@
     "net": -7
   },
   "ui-registry": {
-    "added": 14446,
-    "deleted": 7385,
-    "net": 7061
+    "added": 5152,
+    "deleted": 649,
+    "net": 4503
   },
   "um790-backup": {
     "added": 14,

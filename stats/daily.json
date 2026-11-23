@@ -1,61 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-15",
-      "repos": {
-        "circleci-stats": {
-          "added": 9,
-          "deleted": 9,
-          "net": 0
-        },
-        "data-download": {
-          "added": 7854,
-          "deleted": 930,
-          "net": 6924
-        },
-        "data-scout": {
-          "added": 38,
-          "deleted": 16,
-          "net": 22
-        },
-        "deepseek-balance": {
-          "added": 67,
-          "deleted": 20,
-          "net": 47
-        },
-        "devdash": {
-          "added": 21,
-          "deleted": 5,
-          "net": 16
-        },
-        "genproj": {
-          "added": 50,
-          "deleted": 42,
-          "net": 8
-        },
-        "github-stats": {
-          "added": 117,
-          "deleted": 52,
-          "net": 65
-        },
-        "notes-mcp": {
-          "added": 1,
-          "deleted": 1,
-          "net": 0
-        },
-        "stratechery-search": {
-          "added": 64,
-          "deleted": 15,
-          "net": 49
-        },
-        "ui-registry": {
-          "added": 9294,
-          "deleted": 6736,
-          "net": 2558
-        }
-      }
-    },
-    {
       "date": "2026-11-16",
       "repos": {
         "a2a-goose": {
@@ -354,10 +299,50 @@
           "net": -10
         }
       }
+    },
+    {
+      "date": "2026-11-22",
+      "repos": {
+        "circleci-stats": {
+          "added": 9,
+          "deleted": 9,
+          "net": 0
+        },
+        "data-download": {
+          "added": 3675,
+          "deleted": 381,
+          "net": 3294
+        },
+        "data-download-drivers": {
+          "added": 1873,
+          "deleted": 47,
+          "net": 1826
+        },
+        "data-sourcing-agent": {
+          "added": 1,
+          "deleted": 1,
+          "net": 0
+        },
+        "genproj": {
+          "added": 516,
+          "deleted": 100,
+          "net": 416
+        },
+        "github-stats": {
+          "added": 61,
+          "deleted": 111,
+          "net": -50
+        },
+        "notes-mcp": {
+          "added": 1,
+          "deleted": 1,
+          "net": 0
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-22T14:37:19.580594+00:00",
+  "generated_at": "2026-11-23T18:13:34.000700+00:00",
   "window_days": 7,
-  "window_end": "2026-11-21",
-  "window_start": "2026-11-15"
+  "window_end": "2026-11-22",
+  "window_start": "2026-11-16"
 }
