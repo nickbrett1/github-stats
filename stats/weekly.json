@@ -1,183 +1,63 @@
 {
-  "a2a-goose": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
-  },
-  "backup-dash": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
-  },
-  "bd": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
-  },
-  "circleci-mcp": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
-  },
   "circleci-stats": {
-    "added": 59,
-    "deleted": 59,
+    "added": 60,
+    "deleted": 60,
     "net": 0
   },
-  "dagu-dags": {
-    "added": 40,
-    "deleted": 5,
-    "net": 35
-  },
   "data-download": {
-    "added": 20972,
-    "deleted": 1353,
-    "net": 19619
+    "added": 24703,
+    "deleted": 3106,
+    "net": 21597
   },
   "data-download-drivers": {
-    "added": 7146,
-    "deleted": 190,
-    "net": 6956
-  },
-  "data-scout": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
+    "added": 8509,
+    "deleted": 246,
+    "net": 8263
   },
   "data-sourcing-agent": {
-    "added": 15,
-    "deleted": 2,
-    "net": 13
-  },
-  "databento-discovery": {
-    "added": 14,
+    "added": 1,
     "deleted": 1,
-    "net": 13
+    "net": 0
   },
   "dbt-duckdb": {
     "added": 2,
     "deleted": 2,
     "net": 0
   },
-  "deepseek-balance": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
-  },
   "devdash": {
-    "added": 253,
-    "deleted": 44,
-    "net": 209
-  },
-  "devopen": {
-    "added": 308,
-    "deleted": 3,
-    "net": 305
-  },
-  "ftn": {
-    "added": 14,
+    "added": 1,
     "deleted": 1,
-    "net": 13
-  },
-  "gaggle": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
+    "net": 0
   },
   "galactic-unicorn": {
-    "added": 66,
-    "deleted": 14,
-    "net": 52
+    "added": 52,
+    "deleted": 13,
+    "net": 39
   },
   "galactic-unicorn-remote": {
-    "added": 2407,
-    "deleted": 880,
-    "net": 1527
+    "added": 76,
+    "deleted": 33,
+    "net": 43
   },
-  "gallery": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
-  },
-  "game-catalog": {
-    "added": 1794,
-    "deleted": 41,
-    "net": 1753
-  },
-  "generated_at": "2026-11-23T18:13:34.000700+00:00",
+  "generated_at": "2026-11-24T17:48:08.753597+00:00",
   "genproj": {
-    "added": 842,
-    "deleted": 103,
-    "net": 739
+    "added": 828,
+    "deleted": 102,
+    "net": 726
   },
   "github-stats": {
-    "added": 649,
-    "deleted": 419,
-    "net": 230
-  },
-  "nas-port-mcp": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
-  },
-  "nas-reach-mcp": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
-  },
-  "netwatch-dash": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
+    "added": 637,
+    "deleted": 452,
+    "net": 185
   },
   "notes-mcp": {
-    "added": 15,
-    "deleted": 2,
-    "net": 13
-  },
-  "parquet-peek": {
-    "added": 14,
+    "added": 1,
     "deleted": 1,
-    "net": 13
-  },
-  "pshelf": {
-    "added": 449,
-    "deleted": 27,
-    "net": 422
-  },
-  "reader": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
-  },
-  "roost": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
-  },
-  "stratechery-archive": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
-  },
-  "stratechery-search": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
+    "net": 0
   },
   "stripe-toddler": {
     "added": 23,
     "deleted": 30,
     "net": -7
-  },
-  "ui-registry": {
-    "added": 5152,
-    "deleted": 649,
-    "net": 4503
-  },
-  "um790-backup": {
-    "added": 14,
-    "deleted": 1,
-    "net": 13
   }
 }

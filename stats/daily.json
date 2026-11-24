@@ -1,176 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-16",
-      "repos": {
-        "a2a-goose": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "backup-dash": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "bd": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "circleci-mcp": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "circleci-stats": {
-          "added": 8,
-          "deleted": 8,
-          "net": 0
-        },
-        "dagu-dags": {
-          "added": 40,
-          "deleted": 5,
-          "net": 35
-        },
-        "data-download": {
-          "added": 847,
-          "deleted": 54,
-          "net": 793
-        },
-        "data-scout": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "data-sourcing-agent": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "databento-discovery": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "deepseek-balance": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "devdash": {
-          "added": 252,
-          "deleted": 43,
-          "net": 209
-        },
-        "devopen": {
-          "added": 308,
-          "deleted": 3,
-          "net": 305
-        },
-        "ftn": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "gaggle": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "galactic-unicorn": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "galactic-unicorn-remote": {
-          "added": 2331,
-          "deleted": 847,
-          "net": 1484
-        },
-        "gallery": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "game-catalog": {
-          "added": 1794,
-          "deleted": 41,
-          "net": 1753
-        },
-        "genproj": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "github-stats": {
-          "added": 85,
-          "deleted": 55,
-          "net": 30
-        },
-        "nas-port-mcp": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "nas-reach-mcp": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "netwatch-dash": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "notes-mcp": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "parquet-peek": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "pshelf": {
-          "added": 449,
-          "deleted": 27,
-          "net": 422
-        },
-        "reader": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "roost": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "stratechery-archive": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "stratechery-search": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        },
-        "ui-registry": {
-          "added": 5152,
-          "deleted": 649,
-          "net": 4503
-        },
-        "um790-backup": {
-          "added": 14,
-          "deleted": 1,
-          "net": 13
-        }
-      }
-    },
-    {
       "date": "2026-11-17",
       "repos": {
         "circleci-stats": {
@@ -339,10 +169,35 @@
           "net": 0
         }
       }
+    },
+    {
+      "date": "2026-11-23",
+      "repos": {
+        "circleci-stats": {
+          "added": 9,
+          "deleted": 9,
+          "net": 0
+        },
+        "data-download": {
+          "added": 4578,
+          "deleted": 1807,
+          "net": 2771
+        },
+        "data-download-drivers": {
+          "added": 1363,
+          "deleted": 56,
+          "net": 1307
+        },
+        "github-stats": {
+          "added": 73,
+          "deleted": 88,
+          "net": -15
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-23T18:13:34.000700+00:00",
+  "generated_at": "2026-11-24T17:48:08.753597+00:00",
   "window_days": 7,
-  "window_end": "2026-11-22",
-  "window_start": "2026-11-16"
+  "window_end": "2026-11-23",
+  "window_start": "2026-11-17"
 }
