@@ -1,26 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-18",
-      "repos": {
-        "circleci-stats": {
-          "added": 8,
-          "deleted": 8,
-          "net": 0
-        },
-        "data-download": {
-          "added": 1261,
-          "deleted": 510,
-          "net": 751
-        },
-        "github-stats": {
-          "added": 80,
-          "deleted": 60,
-          "net": 20
-        }
-      }
-    },
-    {
       "date": "2026-11-19",
       "repos": {
         "circleci-stats": {
@@ -184,10 +164,55 @@
           "net": 0
         }
       }
+    },
+    {
+      "date": "2026-11-25",
+      "repos": {
+        "circleci-stats": {
+          "added": 7,
+          "deleted": 7,
+          "net": 0
+        },
+        "dagu-dags": {
+          "added": 1,
+          "deleted": 1,
+          "net": 0
+        },
+        "data-download": {
+          "added": 4273,
+          "deleted": 741,
+          "net": 3532
+        },
+        "data-download-drivers": {
+          "added": 2214,
+          "deleted": 2,
+          "net": 2212
+        },
+        "genproj": {
+          "added": 2555,
+          "deleted": 109,
+          "net": 2446
+        },
+        "github-stats": {
+          "added": 54,
+          "deleted": 74,
+          "net": -20
+        },
+        "ui-registry": {
+          "added": 619,
+          "deleted": 22,
+          "net": 597
+        },
+        "um790-backup": {
+          "added": 24,
+          "deleted": 0,
+          "net": 24
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-25T17:15:29.972115+00:00",
+  "generated_at": "2026-11-26T16:57:00.963037+00:00",
   "window_days": 7,
-  "window_end": "2026-11-24",
-  "window_start": "2026-11-18"
+  "window_end": "2026-11-25",
+  "window_start": "2026-11-19"
 }
