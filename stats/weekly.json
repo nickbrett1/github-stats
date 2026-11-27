@@ -1,28 +1,28 @@
 {
   "circleci-stats": {
-    "added": 59,
-    "deleted": 59,
+    "added": 58,
+    "deleted": 58,
     "net": 0
   },
   "dagu-dags": {
-    "added": 1,
-    "deleted": 1,
+    "added": 3,
+    "deleted": 3,
     "net": 0
   },
   "data-download": {
-    "added": 33567,
-    "deleted": 4511,
-    "net": 29056
+    "added": 26013,
+    "deleted": 5035,
+    "net": 20978
   },
   "data-download-drivers": {
-    "added": 11248,
-    "deleted": 265,
-    "net": 10983
+    "added": 11567,
+    "deleted": 289,
+    "net": 11278
   },
   "data-sourcing-agent": {
-    "added": 1,
-    "deleted": 1,
-    "net": 0
+    "added": 580,
+    "deleted": 76,
+    "net": 504
   },
   "dbt-duckdb": {
     "added": 2,
@@ -30,20 +30,20 @@
     "net": 0
   },
   "devdash": {
-    "added": 1,
-    "deleted": 1,
-    "net": 0
+    "added": 1700,
+    "deleted": 32,
+    "net": 1668
   },
-  "generated_at": "2026-11-26T16:57:00.963037+00:00",
+  "generated_at": "2026-11-27T16:42:07.467234+00:00",
   "genproj": {
-    "added": 3071,
-    "deleted": 209,
-    "net": 2862
+    "added": 3704,
+    "deleted": 223,
+    "net": 3481
   },
   "github-stats": {
-    "added": 358,
-    "deleted": 728,
-    "net": -370
+    "added": 401,
+    "deleted": 731,
+    "net": -330
   },
   "notes-mcp": {
     "added": 1,
@@ -56,13 +56,13 @@
     "net": 0
   },
   "ui-registry": {
-    "added": 619,
-    "deleted": 22,
-    "net": 597
+    "added": 882,
+    "deleted": 44,
+    "net": 838
   },
   "um790-backup": {
-    "added": 24,
-    "deleted": 0,
-    "net": 24
+    "added": 59,
+    "deleted": 28,
+    "net": 31
   }
 }

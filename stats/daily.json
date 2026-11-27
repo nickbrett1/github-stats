@@ -1,31 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-11-19",
-      "repos": {
-        "circleci-stats": {
-          "added": 9,
-          "deleted": 9,
-          "net": 0
-        },
-        "data-download": {
-          "added": 12031,
-          "deleted": 60,
-          "net": 11971
-        },
-        "devdash": {
-          "added": 1,
-          "deleted": 1,
-          "net": 0
-        },
-        "github-stats": {
-          "added": 35,
-          "deleted": 35,
-          "net": 0
-        }
-      }
-    },
-    {
       "date": "2026-11-20",
       "repos": {
         "circleci-stats": {
@@ -209,10 +184,65 @@
           "net": 24
         }
       }
+    },
+    {
+      "date": "2026-11-26",
+      "repos": {
+        "circleci-stats": {
+          "added": 8,
+          "deleted": 8,
+          "net": 0
+        },
+        "dagu-dags": {
+          "added": 2,
+          "deleted": 2,
+          "net": 0
+        },
+        "data-download": {
+          "added": 4477,
+          "deleted": 584,
+          "net": 3893
+        },
+        "data-download-drivers": {
+          "added": 319,
+          "deleted": 24,
+          "net": 295
+        },
+        "data-sourcing-agent": {
+          "added": 579,
+          "deleted": 75,
+          "net": 504
+        },
+        "devdash": {
+          "added": 1700,
+          "deleted": 32,
+          "net": 1668
+        },
+        "genproj": {
+          "added": 633,
+          "deleted": 14,
+          "net": 619
+        },
+        "github-stats": {
+          "added": 78,
+          "deleted": 38,
+          "net": 40
+        },
+        "ui-registry": {
+          "added": 263,
+          "deleted": 22,
+          "net": 241
+        },
+        "um790-backup": {
+          "added": 35,
+          "deleted": 28,
+          "net": 7
+        }
+      }
     }
   ],
-  "generated_at": "2026-11-26T16:57:00.963037+00:00",
+  "generated_at": "2026-11-27T16:42:07.467234+00:00",
   "window_days": 7,
-  "window_end": "2026-11-25",
-  "window_start": "2026-11-19"
+  "window_end": "2026-11-26",
+  "window_start": "2026-11-20"
 }
